@@ -1,0 +1,50 @@
+Comments from class:
+
+Civil war reenactment game of battle of Gettysburg
+Choose what side – at beginning
+Stats atticuted – map, basic layout, number of people
+AI program – as way other team acted historically 
+Or against other people 
+Set bataltions in positions want to go – press go 
+Every few realistic hours, can move them around – animation as plays through – until one side surrenders or annihilated 
+If you win the battle, say whether free slaves or not 
+Winner not predetermined – unless both AIs playing against each other
+4-day battle – cycle – can have speed settings 
+Give orders move often, put general near regiment (can edit more frequently) 
+So long because – union army general blocks away (could only get messages out every four hours)
+
+Game play layout: turn-based 
+Vertical, 2D map, have on terrain that is ghettysburg 
+Basing AI on historical data – player deviates – AI if they’re over there, we’ll go over there and attack (responsive AI that still follows basic strategies they used) 
+If do something random, AI might not be able to reaction properly
+Type of forces: cavalry, artillery, infantry (you are the general, have different regiments separately)
+Cannons for artillery – actual placement, but can move them (cost shells, take more time) 
+Always same starting position (can’t add in units from either side – everyone starts same, historically accurate) 
+Board game 
+Can add variety by adding battles (others) 
+If do what union did (exactly) – always win 
+One mode: historical 
+Zoom out – see entire hill 
+Can choose to zoom in – like total war
+Enough of where battlefield was, possibly little outside it
+Blocks of color – for each regiments
+Nothing smaller than regiments 
+Drag units – location where go
+Checkpoints – go here and then here; drag path (time period – each move an hour, two hours; limit distance)
+Inventory – amount of ammunition for cannons, food (if can’t continue to feed them) (union faster rate of food than confederacy – can have bar)
+What is ingame hour – shortened; depend on how well do against historical AI – minute per hour
+Could fast forward – rest for 1 hour – can choose to add
+AI for each regiment – scout, alert 
+How does sleep play in – exhaustion? Regaining health bonus (health bar) 
+How much damage can take – food, sleep, morale (could desert)
+Number of rations – 1 ration to entire regiment (that feeds) – don’t worry about micro
+If fancy – could buy time, food 
+In one term – fire off ten cannon shells, can send out orders (can take amount of time to have them implemented) - no disobeyed orders?
+During your turn: pause in time, move people around  GO
+Your guys move for hour; while their guys move for hour
+Only after both hit go – everyone moves, but can’t give orders now – after hour (freeze) – give more orders 
+If freeze in middle of battle – have people support; retreat
+General only one who can give orders 
+Alcohol – for morale boosting? 
+Medics – x healthy, y wounded, z dead 
+
