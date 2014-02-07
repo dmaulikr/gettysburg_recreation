@@ -1,1 +1,40 @@
 Basic TODO list.
+
+===========================================
+
+Classes:
+    Player
+        Stuff
+        AI (strategy)
+            Historical
+    Regiment
+        Unit Type
+        AI (Local)
+        Allegiance
+        Motion
+        Health
+        Position
+    Map
+        Tiles
+            Position
+            Type
+            Other attributes
+        Little map
+        Big map (in menu bar?)
+    Menu Screen
+        Select side
+        Options
+    Option Menu (in-game) == pause
+        Exit
+        Sound/grapics settings
+        Save (autosave?)
+        Credits
+    Graphics
+    Music
+
+===========================================
+
+TODO (inorder):
+    Start Menu
+    Map
+    Regiments
