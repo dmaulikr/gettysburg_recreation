@@ -10,6 +10,7 @@
 		4069DED818A6D8030033C024 /* StartMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069DED718A6D8030033C024 /* StartMenu.m */; };
 		4069DEDC18A6DA250033C024 /* StartMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4069DEDB18A6DA250033C024 /* StartMenu.storyboard */; };
 		4069DEDF18A6DE0B0033C024 /* XYZRegiment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069DEDE18A6DE0B0033C024 /* XYZRegiment.m */; };
+		4069DEE218A6ED060033C024 /* XYZTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069DEE118A6ED060033C024 /* XYZTile.m */; };
 		D0332E3918A6D423007C0FF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0332E3818A6D423007C0FF7 /* Foundation.framework */; };
 		D0332E3B18A6D423007C0FF7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0332E3A18A6D423007C0FF7 /* CoreGraphics.framework */; };
 		D0332E3D18A6D423007C0FF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0332E3C18A6D423007C0FF7 /* UIKit.framework */; };
@@ -40,6 +41,8 @@
 		4069DEDB18A6DA250033C024 /* StartMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartMenu.storyboard; sourceTree = "<group>"; };
 		4069DEDD18A6DE0B0033C024 /* XYZRegiment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZRegiment.h; sourceTree = "<group>"; };
 		4069DEDE18A6DE0B0033C024 /* XYZRegiment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZRegiment.m; sourceTree = "<group>"; };
+		4069DEE018A6ED060033C024 /* XYZTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTile.h; sourceTree = "<group>"; };
+		4069DEE118A6ED060033C024 /* XYZTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTile.m; sourceTree = "<group>"; };
 		D0332E3518A6D423007C0FF7 /* gettysburgRecreation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gettysburgRecreation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0332E3818A6D423007C0FF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0332E3A18A6D423007C0FF7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,6 +90,8 @@
 			children = (
 				4069DEDB18A6DA250033C024 /* StartMenu.storyboard */,
 				4069DEDD18A6DE0B0033C024 /* XYZRegiment.h */,
+				4069DEE018A6ED060033C024 /* XYZTile.h */,
+				4069DEE118A6ED060033C024 /* XYZTile.m */,
 				4069DEDE18A6DE0B0033C024 /* XYZRegiment.m */,
 				4069DED618A6D8030033C024 /* StartMenu.h */,
 				4069DED718A6D8030033C024 /* StartMenu.m */,
@@ -254,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0332E4918A6D423007C0FF7 /* XYZAppDelegate.m in Sources */,
+				4069DEE218A6ED060033C024 /* XYZTile.m in Sources */,
 				4069DED818A6D8030033C024 /* StartMenu.m in Sources */,
 				4069DEDF18A6DE0B0033C024 /* XYZRegiment.m in Sources */,
 				D0332E4518A6D423007C0FF7 /* main.m in Sources */,
