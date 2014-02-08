@@ -48,3 +48,38 @@ General only one who can give orders
 Alcohol – for morale boosting? 
 Medics – x healthy, y wounded, z dead 
 
+
+Class Organization:
+    Player Class:
+        Controls and commands Regiments
+        Access the map through the MapManager
+        Has a regimentSelected field (Regiment *) that will be nil if nothing selected
+
+    MapManager Class:
+        Gets updates from Regiments 
+        Has a Board object
+        Displays/updates display on screen; remembers previous display and doesn't change things unless prodded by Regiments
+            Where are the regiments?
+            Where they going?
+            Are they alive?
+            etc.
+        Handles IO-getting (user touch/click) -> hands to Player
+
+    Board Class
+        Subclass of MapManager
+        2D array of Tiles
+        
+    Tile Class
+        Subclass of Board
+        Has floats elevation, combatMultiplier, movementMultiplier
+        Has string terrain; for display purposes only
+        Has location in array, which is the index (int, int)
+
+    Regiment Class
+        Owned by a Player
+        Can send update messages to MapManager (I'm now over here/dead/moving/whatever)
+        Has fields for health, combatStrength
+        Has fields for location, currentVelocity, maxSpeed
+        Can moveTo location and attack other regiments
+            Location is (float, float), where integer part is the index (which tile you're on) and the fractional part is the location within the tile
+
