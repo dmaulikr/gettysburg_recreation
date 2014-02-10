@@ -24,9 +24,9 @@
 @property CGFloat combatMultiplier;
 
 // A label for the type of terrain on the tile
-@property NSString *terrain;
+@property NSString *terrain; 
 
 // A factory method that creates Tile objects
-+ (id)Tile:(CGFloat)elevation movementSpeedMultiplier:(CGFloat)movementSpeedMultiplier combatMultiplier:(CGFloat)combatMultiplier terrain:(NSString *)terrain;
+- (id)initWithValues:(CGFloat)elevation movementSpeedMultiplier:(CGFloat)movementSpeedMultiplier combatMultiplier:(CGFloat)combatMultiplier terrain:(NSString *)terrain;
 
 @end

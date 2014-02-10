@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40203DA818A86F2400BD4566 /* XYZBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 40203DA718A86F2400BD4566 /* XYZBoard.m */; };
 		4069DED818A6D8030033C024 /* StartMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069DED718A6D8030033C024 /* StartMenu.m */; };
 		4069DEDC18A6DA250033C024 /* StartMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4069DEDB18A6DA250033C024 /* StartMenu.storyboard */; };
 		4069DEDF18A6DE0B0033C024 /* XYZRegiment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069DEDE18A6DE0B0033C024 /* XYZRegiment.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40203DA618A86F2400BD4566 /* XYZBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZBoard.h; sourceTree = "<group>"; };
+		40203DA718A86F2400BD4566 /* XYZBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZBoard.m; sourceTree = "<group>"; };
 		4069DED618A6D8030033C024 /* StartMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartMenu.h; sourceTree = "<group>"; };
 		4069DED718A6D8030033C024 /* StartMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartMenu.m; sourceTree = "<group>"; };
 		4069DEDB18A6DA250033C024 /* StartMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartMenu.storyboard; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 			children = (
 				4069DEDB18A6DA250033C024 /* StartMenu.storyboard */,
 				4069DEDD18A6DE0B0033C024 /* XYZRegiment.h */,
+				40203DA618A86F2400BD4566 /* XYZBoard.h */,
+				40203DA718A86F2400BD4566 /* XYZBoard.m */,
 				4069DEE018A6ED060033C024 /* XYZTile.h */,
 				4069DEE118A6ED060033C024 /* XYZTile.m */,
 				4069DEDE18A6DE0B0033C024 /* XYZRegiment.m */,
@@ -258,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40203DA818A86F2400BD4566 /* XYZBoard.m in Sources */,
 				D0332E4918A6D423007C0FF7 /* XYZAppDelegate.m in Sources */,
 				4069DEE218A6ED060033C024 /* XYZTile.m in Sources */,
 				4069DED818A6D8030033C024 /* StartMenu.m in Sources */,

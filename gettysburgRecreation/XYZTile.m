@@ -10,7 +10,15 @@
 
 @implementation XYZTile
 
-+ (id)Tile:(CGFloat)elevation movementSpeedMultiplier:(CGFloat)movementSpeedMultiplier combatMultiplier:(CGFloat)combatMultiplier terrain:(NSString *)terrain {
-    
+- (id)initWithValues:(CGFloat)elevation movementSpeedMultiplier:(CGFloat)movementSpeedMultiplier combatMultiplier:(CGFloat)combatMultiplier terrain:(NSString *)terrain{
+    self = [super init];
+    if (self) {
+        self.elevation = elevation;
+        self.movementSpeedMultiplier = movementSpeedMultiplier;
+        self.combatMultiplier = combatMultiplier;
+        self.terrain = terrain;
+    }
+    return self;
 }
+
 @end
