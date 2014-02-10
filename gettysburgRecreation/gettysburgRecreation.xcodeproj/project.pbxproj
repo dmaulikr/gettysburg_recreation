@@ -62,6 +62,7 @@
 		D0332E5918A6D423007C0FF7 /* gettysburgRecreationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "gettysburgRecreationTests-Info.plist"; sourceTree = "<group>"; };
 		D0332E5B18A6D423007C0FF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0332E5D18A6D423007C0FF7 /* gettysburgRecreationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gettysburgRecreationTests.m; sourceTree = "<group>"; };
+		D0A5B55218A87AA500A5DD54 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +94,7 @@
 			children = (
 				4069DEDB18A6DA250033C024 /* StartMenu.storyboard */,
 				4069DEDD18A6DE0B0033C024 /* XYZRegiment.h */,
+				D0A5B55218A87AA500A5DD54 /* Constants.h */,
 				40203DA618A86F2400BD4566 /* XYZBoard.h */,
 				40203DA718A86F2400BD4566 /* XYZBoard.m */,
 				4069DEE018A6ED060033C024 /* XYZTile.h */,

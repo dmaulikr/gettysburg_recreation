@@ -11,22 +11,22 @@
 @interface XYZTile : NSObject
 
 // The elevation of the terrain on the tile
-@property CGFloat elevation;
+@property float elevation;
 
 // The x and y location of the tile
-@property NSInteger xLocation;
-@property NSInteger yLocation;
+@property int xLocation;
+@property int yLocation;
 
 // How the speed of a regiment is affected by the terrian
-@property CGFloat movementSpeedMultiplier;
+@property float movementSpeedMultiplier;
 
 // How the terrain aids or hinders a regiment's combat
-@property CGFloat combatMultiplier;
+@property float combatMultiplier;
 
 // A label for the type of terrain on the tile
 @property NSString *terrain; 
 
 // A factory method that creates Tile objects
-- (id)initWithValues:(CGFloat)elevation movementSpeedMultiplier:(CGFloat)movementSpeedMultiplier combatMultiplier:(CGFloat)combatMultiplier terrain:(NSString *)terrain;
+- (id)initWithValues:(float)elevation movementSpeedMultiplier:(float)movementSpeedMultiplier combatMultiplier:(float)combatMultiplier terrain:(NSString *)terrain;
 
 @end
