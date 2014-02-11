@@ -83,3 +83,19 @@ Class Organization:
         Can moveTo location and attack other regiments
             Location is (float, float), where integer part is the index (which tile you're on) and the fractional part is the location within the tile
 
+INFORMATION COLLECTED FROM INTERVIEW:
+	Regement>Brigade>Division>Corps>Army (each had three times the amount as the group before, except a regiment has 800 men starting, and is considered defeated with 100 men)
+	Types of Infantry Arrangments: Skirmish Line (everyone in one line), 2 deep (only broken by artillery.
+	Types of Firing Patterns: Volley (everyone at once), Front then Rear, Wave.  Muskets had a range of 250 yards
+	Cavalry Attacked with sabers, and were only effective in close range.
+	Infantry beats Cavalry, Cavalry beats artillery, Artillery beats infantry.
+	Cannons usually shot 3 shells per minute, but could go “Double Canister, No Sponge” to go faster, but risk explosion.   range of 1000 yards.
+	3x Offense = 1x Defense
+	Necessities: Ammo>Water>Food
+	Time Delay between getting orders to the troops was longer the higher up the orders were from.  Time also was longer for information to pass through the Confederacy than the Union.
+
+	IDEAS FROM INTERVIEW:
+	Title: “Double Canister, No Sponge; a Gettysburg Experience”
+	Levels: Play as Colonel and move up through the ranks commanding more and more people.
+	Focus:  Only work on the first day’s battle (killer angels), possibly incorporate the other 2 days in later iterations.
+
