@@ -51,7 +51,7 @@ Medics – x healthy, y wounded, z dead
 
 Class Organization:
     Player Class:
-        Controls and commands Regiments
+        Controls and commands Regiments (or maybe just one Regiment!)
         Access the map through the MapManager
         Has a regimentSelected field (Regiment *) that will be nil if nothing selected
 
