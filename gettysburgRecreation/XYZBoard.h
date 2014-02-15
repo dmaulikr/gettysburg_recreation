@@ -15,6 +15,6 @@
 // The board size
 
 // A two-dimensional array that represents the board
-@property NSArray *board;
+// @property NSArray *board;
 
 @end

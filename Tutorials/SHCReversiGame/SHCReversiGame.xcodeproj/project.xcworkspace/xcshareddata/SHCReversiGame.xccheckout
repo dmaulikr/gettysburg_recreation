@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>CEF05183-C892-44DA-B528-5DE643C3A5E7</string>
+	<string>4A89EB88-DDB8-4B1F-A1C7-68F9B4475BCA</string>
 	<key>IDESourceControlProjectName</key>
-	<string>gettysburgRecreation</string>
+	<string>SHCReversiGame</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>48BA960F-BA6E-4DFD-8727-45C9F79605C0</key>
+		<key>85AB2E2C-4907-4E9E-81FA-7018D9749CAF</key>
 		<string>https://github.com/ellenfkh/gettysburg_recreation.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>gettysburgRecreation/gettysburgRecreation.xcodeproj/project.xcworkspace</string>
+	<string>Tutorials/SHCReversiGame/SHCReversiGame.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>48BA960F-BA6E-4DFD-8727-45C9F79605C0</key>
-		<string>../../..</string>
+		<key>85AB2E2C-4907-4E9E-81FA-7018D9749CAF</key>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/ellenfkh/gettysburg_recreation.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>48BA960F-BA6E-4DFD-8727-45C9F79605C0</string>
+	<string>85AB2E2C-4907-4E9E-81FA-7018D9749CAF</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>48BA960F-BA6E-4DFD-8727-45C9F79605C0</string>
+			<string>85AB2E2C-4907-4E9E-81FA-7018D9749CAF</string>
 			<key>IDESourceControlWCCName</key>
 			<string>gettysburg_recreation</string>
 		</dict>
