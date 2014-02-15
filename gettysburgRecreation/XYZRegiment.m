@@ -10,4 +10,10 @@
 
 @implementation XYZRegiment
 
+
+- (void) moveToRow:(int)row andCol:(int)col {
+
+    //FIXME
+    return;
+}
 @end

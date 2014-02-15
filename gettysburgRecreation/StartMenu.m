@@ -9,5 +9,6 @@
 #import "StartMenu.h"
 
 @implementation StartMenu
+@synthesize rankSelect;
 
 @end
