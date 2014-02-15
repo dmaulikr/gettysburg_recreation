@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>DB359B1B-B163-4D2C-BB5A-F489225AB217</string>
+	<string>CEF05183-C892-44DA-B528-5DE643C3A5E7</string>
 	<key>IDESourceControlProjectName</key>
 	<string>gettysburgRecreation</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>5B2E7506-52A7-439F-89D2-4399D1C91D49</key>
-		<string>https://github.com/ellenfkh/gettysburg_recreation</string>
+		<key>48BA960F-BA6E-4DFD-8727-45C9F79605C0</key>
+		<string>https://github.com/ellenfkh/gettysburg_recreation.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>gettysburgRecreation/gettysburgRecreation.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5B2E7506-52A7-439F-89D2-4399D1C91D49</key>
+		<key>48BA960F-BA6E-4DFD-8727-45C9F79605C0</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/ellenfkh/gettysburg_recreation</string>
+	<string>https://github.com/ellenfkh/gettysburg_recreation.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5B2E7506-52A7-439F-89D2-4399D1C91D49</string>
+	<string>48BA960F-BA6E-4DFD-8727-45C9F79605C0</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5B2E7506-52A7-439F-89D2-4399D1C91D49</string>
+			<string>48BA960F-BA6E-4DFD-8727-45C9F79605C0</string>
 			<key>IDESourceControlWCCName</key>
 			<string>gettysburg_recreation</string>
 		</dict>
