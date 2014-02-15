@@ -44,25 +44,23 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "12"
-            endingLineNumber = "12"
-            landmarkName = "@implementation XYZBoard"
-            landmarkType = "3">
+            endingLineNumber = "12">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "XYZBoard.m"
-            timestampString = "413789119.898233"
+            filePath = "XYZTile.m"
+            timestampString = "414196378.62018"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "@implementation XYZBoard"
-            landmarkType = "3">
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "-initWithValues:movementSpeedMultiplier:combatMultiplier:terrain:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

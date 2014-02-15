@@ -10,7 +10,7 @@
 
 @implementation XYZTile
 
-- (id)initWithValues:(float)elevation movementSpeedMultiplier:(float)movementSpeedMultiplier combatMultiplier:(float)combatMultiplier terrain:(NSString *)terrain{
+- (id)initWithValues:(float)elevation movementSpeedMultiplier:(float)movementSpeedMultiplier combatMultiplier:(float)combatMultiplier terrain:(TileTerrain)terrain{
     self = [super init];
     if (self) {
         self.elevation = elevation;
