@@ -7,6 +7,7 @@
 //
 
 #import "SHCBoardTest.h"
+#import "SHCBoard.h"
 
 @implementation SHCBoardTest
 

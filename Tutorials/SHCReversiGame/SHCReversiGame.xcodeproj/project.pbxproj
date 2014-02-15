@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40445ADA18AF24E00081539E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A5A0611671D8F600AF63F4 /* SenTestingKit.framework */; };
 		40A9677218AF07F600BACFE7 /* SHCBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A9677118AF07F600BACFE7 /* SHCBoard.m */; };
 		40A9677B18AF0E5600BACFE7 /* SHCBoardTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A9677A18AF0E5500BACFE7 /* SHCBoardTest.m */; };
 		72347606167601BE00185647 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72347605167601BE00185647 /* main.m */; };
@@ -86,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40445ADA18AF24E00081539E /* SenTestingKit.framework in Frameworks */,
 				72A5A03E1671D8F600AF63F4 /* UIKit.framework in Frameworks */,
 				72A5A0401671D8F600AF63F4 /* Foundation.framework in Frameworks */,
 				72A5A0421671D8F600AF63F4 /* CoreGraphics.framework in Frameworks */,
@@ -451,6 +453,10 @@
 		72A5A0731671D8F600AF63F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SHCReversiGame/SHCReversiGame-Prefix.pch";
 				INFOPLIST_FILE = "SHCReversiGame/SHCReversiGame-Info.plist";
@@ -462,6 +468,10 @@
 		72A5A0741671D8F600AF63F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SHCReversiGame/SHCReversiGame-Prefix.pch";
 				INFOPLIST_FILE = "SHCReversiGame/SHCReversiGame-Info.plist";
