@@ -9,7 +9,7 @@
 #ifndef SHCReversiGame_BoardCellState_h
 #define SHCReversiGame_BoardCellState_h
 
-typedef NS_ENUM(NSInteger, BoardCellState) {
+typedef NS_ENUM(NSUInteger, BoardCellState) {
     BoardCellStateEmpty = 0,
     BoardCellStateBlackPiece = 1,
     BoardCellStateWhitePiece = 2

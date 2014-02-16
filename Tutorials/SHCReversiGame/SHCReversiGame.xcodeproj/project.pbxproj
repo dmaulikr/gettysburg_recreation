@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		40445ADA18AF24E00081539E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A5A0611671D8F600AF63F4 /* SenTestingKit.framework */; };
+		40445ADB18AF28840081539E /* SHCBoardTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A9677A18AF0E5500BACFE7 /* SHCBoardTest.m */; };
 		40A9677218AF07F600BACFE7 /* SHCBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A9677118AF07F600BACFE7 /* SHCBoard.m */; };
 		40A9677B18AF0E5600BACFE7 /* SHCBoardTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A9677A18AF0E5500BACFE7 /* SHCBoardTest.m */; };
 		72347606167601BE00185647 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72347605167601BE00185647 /* main.m */; };
@@ -345,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40445ADB18AF28840081539E /* SHCBoardTest.m in Sources */,
 				40A9677218AF07F600BACFE7 /* SHCBoard.m in Sources */,
 				72A5A04E1671D8F600AF63F4 /* SHCAppDelegate.m in Sources */,
 				72A5A0571671D8F600AF63F4 /* SHCViewController.m in Sources */,
