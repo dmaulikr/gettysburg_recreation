@@ -31,7 +31,7 @@
 @property BOOL isAlive;
 
 // A method that moves the reigment
-- (void) moveTo:(CGPoint)destination;
+- (void) moveToRow:(int)row andCol:(int)col;
 
 // A method that attacks (takes another regiment as input)
 

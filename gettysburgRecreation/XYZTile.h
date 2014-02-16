@@ -7,8 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "XYZRegiment.h"
 
 @interface XYZTile : NSObject
+
+
+// Typedef for the terrain of tiles.
+typedef NS_ENUM(NSUInteger, TileTerrain) {
+    TileTerrainField = 0,
+    TileTerrainHill = 1,
+    TileTerrainTree = 2,
+    TileTerrainWater = 3
+    // Add more as needed.
+};
 
 // The elevation of the terrain on the tile
 @property float elevation;
@@ -23,10 +34,14 @@
 // How the terrain aids or hinders a regiment's combat
 @property float combatMultiplier;
 
-// A label for the type of terrain on the tile
-@property NSString *terrain; 
+// Terrain of this tile (for art purposes)
+@property TileTerrain terrain;
+
+// Who is on this tile?  Null if nobody.
+@property XYZRegiment * occupier;
 
 // A factory method that creates Tile objects
-- (id)initWithValues:(float)elevation movementSpeedMultiplier:(float)movementSpeedMultiplier combatMultiplier:(float)combatMultiplier terrain:(NSString *)terrain;
+- (id)initWithValues:(float)elevation movementSpeedMultiplier:(float)movementSpeedMultiplier combatMultiplier:(float)combatMultiplier terrain:(TileTerrain)terrain;
+
 
 @end

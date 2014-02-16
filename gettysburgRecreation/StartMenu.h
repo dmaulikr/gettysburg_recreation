@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StartMenu : NSObject
+@interface StartMenu : UIViewController
+@property (nonatomic, strong) IBOutlet UIPickerView * rankSelect;
 
 @end
