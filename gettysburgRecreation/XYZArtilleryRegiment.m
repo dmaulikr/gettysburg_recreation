@@ -10,4 +10,12 @@
 
 @implementation XYZArtilleryRegiment
 
+-(id)init {
+    self = [super init];
+    if (self) {
+        // set various values
+    }
+    return self;
+}
+
 @end
