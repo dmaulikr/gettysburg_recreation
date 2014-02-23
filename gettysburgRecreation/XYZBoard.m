@@ -10,20 +10,20 @@
 #import "Constants.h"
 #import "XYZTile.h"
 
-const int stupidheight= 100;
+const int rows = 100;
 
-const int dumbwidth = 100;
+const int columns = 100;
 
 @implementation XYZBoard
 {
-    XYZTile * board[stupidheight][dumbwidth];
+    XYZTile * board[rows][columns];
 }
 
-- (id)initWithHeight:(int)height andWidth:(int)width {
+- (id)initWithRows:(int)rows andColumns:(int)columns {
     self = [super init];
     if(self) {
-        self.height = height;
-        self.width = width;
+        self.rows = rows;
+        self.columns = columns;
     }
     return self;
 }
@@ -31,7 +31,7 @@ const int dumbwidth = 100;
 
 - (XYZTile*)getTileAtRow:(int)row andColumn:(int)col {
     // Bounds checking
-    if (row < 0 || col < 0 || row >= self.height || col >= self.width) {
+    if (row < 0 || col < 0 || row >= self.rows || col >= self.columns) {
         [NSException raise:NSRangeException format:@"row or column out of bounds"];
     }
     

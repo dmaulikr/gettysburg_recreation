@@ -24,10 +24,20 @@
 // the location within the tile
 @property NSMutableArray *locationArray;
 
-// Velocity in x and y direction of the regiment
+// The range of movement of a regiment, measured in number of tiles
+@property int moveRange;
+
+// The radius of attack of a regiment, measured in number of tiles
+@property int attackRadius;
+
+// Velocity in x and y direction of the regiment (FIX ME: need this?)
 @property float xVelocity;
 @property float yVelocity;
+
+// Maximum movement speed (FIX ME: Need this?)
 @property float maxSpeed;
+
+// Whether or not the regiment is still alive
 @property BOOL isAlive;
 
 // A method that moves the reigment

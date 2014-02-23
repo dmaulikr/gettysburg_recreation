@@ -44,13 +44,13 @@
 /* Begin PBXFileReference section */
 		40203DA618A86F2400BD4566 /* XYZBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZBoard.h; sourceTree = "<group>"; };
 		40203DA718A86F2400BD4566 /* XYZBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZBoard.m; sourceTree = "<group>"; };
-		4069DED618A6D8030033C024 /* StartMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartMenu.h; sourceTree = "<group>"; };
-		4069DED718A6D8030033C024 /* StartMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartMenu.m; sourceTree = "<group>"; };
+		4069DED618A6D8030033C024 /* StartMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartMenu.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.plist; };
+		4069DED718A6D8030033C024 /* StartMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartMenu.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.xcconfig; };
 		4069DEDB18A6DA250033C024 /* StartMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartMenu.storyboard; sourceTree = "<group>"; };
-		4069DEDD18A6DE0B0033C024 /* XYZRegiment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZRegiment.h; sourceTree = "<group>"; };
 		4069DEDE18A6DE0B0033C024 /* XYZRegiment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZRegiment.m; sourceTree = "<group>"; };
 		4069DEE018A6ED060033C024 /* XYZTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTile.h; sourceTree = "<group>"; };
 		4069DEE118A6ED060033C024 /* XYZTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTile.m; sourceTree = "<group>"; };
+		40D6E74718B96E9200862AF5 /* XYZRegiment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZRegiment.h; sourceTree = "<group>"; };
 		D002AEB718A9EDE100F6B067 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		D02F36C118B027490075FF6D /* XYZPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZPlayer.h; sourceTree = "<group>"; };
 		D02F36C218B027490075FF6D /* XYZPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZPlayer.m; sourceTree = "<group>"; };
@@ -108,19 +108,18 @@
 				4069DEDB18A6DA250033C024 /* StartMenu.storyboard */,
 				4069DED618A6D8030033C024 /* StartMenu.h */,
 				4069DED718A6D8030033C024 /* StartMenu.m */,
-				4069DEDD18A6DE0B0033C024 /* XYZRegiment.h */,
+				4069DEDE18A6DE0B0033C024 /* XYZRegiment.m */,
+				40D6E74718B96E9200862AF5 /* XYZRegiment.h */,
 				40203DA618A86F2400BD4566 /* XYZBoard.h */,
 				40203DA718A86F2400BD4566 /* XYZBoard.m */,
 				4069DEE018A6ED060033C024 /* XYZTile.h */,
 				4069DEE118A6ED060033C024 /* XYZTile.m */,
-				4069DEDD18A6DE0B0033C024 /* XYZRegiment.h */,
 				D0C3308518B662A800E0E315 /* XYZCavalryRegiment.h */,
 				D0C3308618B662A800E0E315 /* XYZCavalryRegiment.m */,
 				D0C3308818B662B100E0E315 /* XYZArtilleryRegiment.h */,
 				D0C3308918B662B100E0E315 /* XYZArtilleryRegiment.m */,
 				D0C3308218B6626700E0E315 /* XYZInfantryRegiment.h */,
 				D0C3308318B6626700E0E315 /* XYZInfantryRegiment.m */,
-				4069DEDE18A6DE0B0033C024 /* XYZRegiment.m */,
 				D02F36C118B027490075FF6D /* XYZPlayer.h */,
 				D02F36C218B027490075FF6D /* XYZPlayer.m */,
 				D0332E3E18A6D423007C0FF7 /* gettysburgRecreation */,
