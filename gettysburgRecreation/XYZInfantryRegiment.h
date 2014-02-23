@@ -9,6 +9,10 @@
 #import "XYZRegiment.h"
 
 @interface XYZInfantryRegiment : XYZRegiment
+
+// The movement speed of the infantry
+@property float infantrySpeed;
+
 // FIXME Infantry-type regiment.  Extends regiment
 // Gets custom attack range, move range.  Maybe extra weakness/strength multipliers?
 -(id)init;

@@ -30,11 +30,11 @@
 // The radius of attack of a regiment, measured in number of tiles
 @property int attackRadius;
 
-// Velocity in x and y direction of the regiment (FIX ME: need this?)
+// Velocity in x and y direction of the regiment (FIXME need this?)
 @property float xVelocity;
 @property float yVelocity;
 
-// Maximum movement speed (FIX ME: Need this?)
+// Maximum movement speed (FIXME Need this?)
 @property float maxSpeed;
 
 // Whether or not the regiment is still alive

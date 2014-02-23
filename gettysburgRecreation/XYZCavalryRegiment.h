@@ -11,6 +11,9 @@
 
 @interface XYZCavalryRegiment : XYZRegiment
 
+// The movement speed of the cavalry
+@property float cavalrySpeed;
+
 -(id)init;
 
 @end
