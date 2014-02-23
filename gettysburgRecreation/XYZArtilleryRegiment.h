@@ -9,5 +9,6 @@
 #import "XYZRegiment.h"
 
 @interface XYZArtilleryRegiment : XYZRegiment
+-(id)init;
 
 @end
