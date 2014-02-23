@@ -11,5 +11,6 @@
 @interface XYZInfantryRegiment : XYZRegiment
 // FIXME Infantry-type regiment.  Extends regiment
 // Gets custom attack range, move range.  Maybe extra weakness/strength multipliers?
+-(id)init;
 
 @end

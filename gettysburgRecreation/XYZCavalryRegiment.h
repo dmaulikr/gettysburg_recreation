@@ -7,7 +7,10 @@
 //
 
 #import "XYZRegiment.h"
+#import "Constants.m"
 
 @interface XYZCavalryRegiment : XYZRegiment
+
+-(id)init;
 
 @end
