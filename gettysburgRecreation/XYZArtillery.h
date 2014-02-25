@@ -8,10 +8,13 @@
 
 #import "XYZRegiment.h"
 
-@interface XYZArtilleryRegiment : XYZRegiment
+@interface XYZArtillery : XYZRegiment
 
 // The number of batteries in the artillery
 @property int numberOfBatteries;
+
+// The number of brigades in the artillery
+@property int numberOfBrigades; 
 
 // The movement speed of the artillery
 @property float artillerySpeed;

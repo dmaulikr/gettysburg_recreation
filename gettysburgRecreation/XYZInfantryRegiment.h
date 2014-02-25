@@ -10,6 +10,9 @@
 
 @interface XYZInfantryRegiment : XYZRegiment
 
+// The starting size of the infantry, in number of men
+extern const int INFANTRY_START_SIZE;
+
 // The movement speed of the infantry
 @property float infantrySpeed;
 

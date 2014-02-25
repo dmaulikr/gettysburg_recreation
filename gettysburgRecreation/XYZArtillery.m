@@ -6,9 +6,9 @@
 //
 //
 
-#import "XYZArtilleryRegiment.h"
+#import "XYZArtillery.h"
 
-@implementation XYZArtilleryRegiment
+@implementation XYZArtillery
 
 -(id)init {
     self = [super init];

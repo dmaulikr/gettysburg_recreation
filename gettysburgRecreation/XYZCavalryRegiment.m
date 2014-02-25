@@ -10,6 +10,10 @@
 #import "XYZCavalryRegiment.h"
 
 @implementation XYZCavalryRegiment
+
+// Declare the starting size of the cavalary
+const int CAVALRY_START_SIZE = 100;
+
 -(id)init {
     self = [super init];
     if (self) {

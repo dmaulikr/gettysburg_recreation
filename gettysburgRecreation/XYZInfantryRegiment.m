@@ -10,6 +10,9 @@
 
 @implementation XYZInfantryRegiment
 
+// Declare the starting size of the infantry
+const int INFANTRY_START_SIZE = 800;
+
 -(id)init {
     self = [super init];
     if (self) {
