@@ -7,6 +7,7 @@
 //
 
 #import "XYZRegiment.h"
+#import "XYZSoldier.h" //FIXME may not need this
 
 @interface XYZArtillery : XYZRegiment
 

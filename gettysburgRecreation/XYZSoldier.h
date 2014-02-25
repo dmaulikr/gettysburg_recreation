@@ -17,4 +17,8 @@
 // The graphics icon representing the soldiers
 // FIXME: Do not know the format of this yet
 
+// A method that places the soldiers into a skirmish line
+// FIXME should this return something? Maybe let user know they are now in a skirmish line?
+- (void) formSkirmish:(XYZSoldier *)soldier numOfSoldiers:(int)numOfSoldiers;
+
 @end

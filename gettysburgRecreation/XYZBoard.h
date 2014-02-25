@@ -17,6 +17,7 @@
 @property int rows;
 @property int columns;
 
+// FIXME need this?
 // A two-dimensional array that represents the board
 // @property NSArray *board;
 

@@ -8,6 +8,7 @@
 
 #import "XYZRegiment.h"
 #import "Constants.m" //FIXME need this?
+#import "XYZSoldier.h"
 
 @interface XYZCavalryRegiment : XYZRegiment
 
@@ -16,6 +17,7 @@ extern const int CAVALRY_START_SIZE;
 
 // The movement speed of the cavalry
 @property float cavalrySpeed;
+
 
 -(id)init;
 

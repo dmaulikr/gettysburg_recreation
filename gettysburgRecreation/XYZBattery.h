@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 # import "XYZBrigade.h"
+#import "XYZSoldier.h" //FIXME may not need this
 
 @interface XYZBattery : NSObject
 
