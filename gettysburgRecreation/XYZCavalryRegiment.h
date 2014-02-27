@@ -7,7 +7,7 @@
 //
 
 #import "XYZRegiment.h"
-#import "Constants.m" //FIXME need this?
+//#import "Constants.m" //FIXME need this?
 #import "XYZSoldier.h"
 
 @interface XYZCavalryRegiment : XYZRegiment

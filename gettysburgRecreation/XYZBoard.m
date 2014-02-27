@@ -7,7 +7,7 @@
 //
 
 #import "XYZBoard.h"
-#import "Constants.h"
+//#import "Constants.h"
 #import "XYZTile.h"
 
 const int rows = 100;

@@ -9,6 +9,10 @@
 #import "XYZSoldier.h"
 
 @implementation XYZSoldier
+- (void) formSkirmish:(XYZSoldier *)soldier numOfSoldiers:(int)numOfSoldiers
+{
+    // FIXME: placeholder.
+}
 
 
 @end
