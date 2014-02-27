@@ -37,24 +37,36 @@
                                 </state>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FO0-7L-g1g">
-                                <rect key="frame" x="323" y="239" width="122" height="30"/>
+                                <rect key="frame" x="323" y="378" width="122" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textNameFieldReturn:" destination="Vk3-5x-Eo7" eventType="editingDidEndOnExit" id="o02-Qb-vnT"/>
+                                </connections>
                             </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UNr-OE-93p">
-                                <rect key="frame" x="-8" y="381" width="768" height="216"/>
+                                <rect key="frame" x="-11" y="145" width="768" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Vk3-5x-Eo7" id="mbG-fC-BYJ"/>
                                     <outlet property="delegate" destination="Vk3-5x-Eo7" id="34h-cS-4AZ"/>
                                 </connections>
                             </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wk-Yh-1Fy">
+                                <rect key="frame" x="170" y="473" width="429" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="nameText" destination="FO0-7L-g1g" id="xh0-70-NiS"/>
                         <outlet property="picker" destination="UNr-OE-93p" id="UO0-TB-ZMR"/>
+                        <outlet property="resultLabel" destination="1wk-Yh-1Fy" id="qhk-5u-vaY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSy-xk-udx" userLabel="First Responder" sceneMemberID="firstResponder"/>

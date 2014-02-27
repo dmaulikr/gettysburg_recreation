@@ -10,13 +10,20 @@
 
 @interface XYZPickerViewController ()
 @property (weak, nonatomic) IBOutlet UIPickerView *picker;
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+@property (weak, nonatomic) IBOutlet UITextField *nameText;
+
+- (IBAction)textNameFieldReturn:(UITextField *)sender;
 
 @end
 
 @implementation XYZPickerViewController
 
-#pragma mark -
-#pragma mark PickerView DataSource
+
+/*
+ * This is where the DataSource methods will be.
+ */
+
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -33,12 +40,25 @@
     return _ranks[row];
 }
 
-#pragma mark -
-#pragma mark PickerView Delegate
+/*
+ * This is where the Delegate methods will be.
+ */
+
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    NSLog(@"Selected a row?");
+    NSString * selectedRank = _ranks[row];
+    NSString * name = _nameText.text;
+    
+    NSString * resultString = [NSString stringWithFormat:
+                               @"Play as %@ %@", selectedRank, name];
+    
+    _resultLabel.text = resultString;
+    NSLog(@"Selected a row!");
 }
+
+/*
+ * Standard ViewController methods down here.
+ */
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -62,4 +82,6 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)textNameFieldReturn:(UITextField *)sender {
+}
 @end
