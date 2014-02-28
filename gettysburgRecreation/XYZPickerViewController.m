@@ -126,6 +126,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"placeholderBG.jpg"]];
+    
     _ranks = @[@"General", @"Brigadier General", @"Major General"];
     _sides = @[@"Union", @"Confederacy"];
     
