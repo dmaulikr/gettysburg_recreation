@@ -27,17 +27,32 @@
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
-    return 1;
+    return 2;   // Component 0 will be the ranks
+                // Component 1 will be loyalty (Union/Confederacy)
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return _ranks.count;
+    if (component == 0)
+    {
+        return _ranks.count;
+    }
+    else
+    {
+        return _sides.count;
+    }
 }
 
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return _ranks[row];
+    if (component == 0)
+    {
+        return _ranks[row];
+    }
+    else
+    {
+        return _sides[row];
+    }
 }
 
 /*
@@ -46,15 +61,54 @@
 
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    NSString * selectedRank = _ranks[row];
-    NSString * name = _nameText.text;
     
-    NSString * resultString = [NSString stringWithFormat:
-                               @"Play as %@ %@", selectedRank, name];
+    //_selectedRank = @"";
+    //_selectedSide = @"";
+
+    if (component == 0)
+    {
+        _selectedRank = _ranks[row];
+    }
+    else
+    {
+        _selectedSide = _sides[row];
+    }
+    
+    NSString * resultString = [self pickerView:pickerView pickedRank:_selectedRank andSide:_selectedSide];
+    
+    //NSString * resultString = [NSString stringWithFormat:
+    //                           @"Play as a %@ of %@", _selectedRank, _selectedSide];
     
     _resultLabel.text = resultString;
-    NSLog(@"Selected a row!");
 }
+
+-(NSString*)pickerView:(UIPickerView*)pickerView pickedRank:(NSString*)rank andSide:(NSString*)side
+{
+    NSString * resultString;
+    if (rank == NULL)
+    {
+        resultString = [NSString stringWithFormat: @"Play for the %@", side];
+    }
+    else if (side == NULL)
+    {
+        resultString = [NSString stringWithFormat:@"Play as a %@", rank];
+    }
+    else
+    {
+        resultString = [NSString stringWithFormat:
+                                   @"Play as a %@ of the %@", _selectedRank, _selectedSide];
+    }
+    return resultString;
+}
+
+/* FIXME
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    _name = _nameText.text;
+    
+}
+ */
+
 
 /*
  * Standard ViewController methods down here.
@@ -73,6 +127,13 @@
 {
     [super viewDidLoad];
     _ranks = @[@"General", @"Brigadier General", @"Major General"];
+    _sides = @[@"Union", @"Confederacy"];
+    
+    //[_picker selectedRowInComponent:2];
+    
+    //_name = _nameText.text;
+    //selectedRank = @"Major General";
+    //_name = @"";
 	// Do any additional setup after loading the view.
 }
 

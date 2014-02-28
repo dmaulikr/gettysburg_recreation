@@ -9,8 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface XYZPickerViewController : UIViewController
-            <UIPickerViewDelegate, UIPickerViewDataSource>
+            <UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate>
 
 @property (strong, nonatomic) NSArray * ranks;
+@property (strong, nonatomic) NSArray * sides;
+
+
+@property NSString * selectedRank;
+@property NSString * selectedSide;
+
+@property NSString * loyalty;
+@property NSString * name;
 
 @end
