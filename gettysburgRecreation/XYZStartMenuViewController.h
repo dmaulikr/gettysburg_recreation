@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XYZPickerViewController : UIViewController
+@interface XYZStartMenuViewController : UIViewController
             <UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate>
 
 @property (strong, nonatomic) NSArray * ranks;

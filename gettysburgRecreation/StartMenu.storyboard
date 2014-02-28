@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Picker View Controller-->
+        <!--Start Menu View Controller-->
         <scene sceneID="oRv-M4-4bs">
             <objects>
-                <viewController id="Vk3-5x-Eo7" customClass="XYZPickerViewController" sceneMemberID="viewController">
+                <viewController id="Vk3-5x-Eo7" customClass="XYZStartMenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1bm-Mn-upZ"/>
                         <viewControllerLayoutGuide type="bottom" id="MoU-me-9xG"/>
@@ -32,7 +32,7 @@
                                 </connections>
                             </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UNr-OE-93p">
-                                <rect key="frame" x="0.0" y="341" width="768" height="216"/>
+                                <rect key="frame" x="0.0" y="426" width="768" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Vk3-5x-Eo7" id="mbG-fC-BYJ"/>
@@ -40,7 +40,7 @@
                                 </connections>
                             </pickerView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a rank and side!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wk-Yh-1Fy">
-                                <rect key="frame" x="21" y="560" width="726" height="166"/>
+                                <rect key="frame" x="27" y="308" width="726" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>

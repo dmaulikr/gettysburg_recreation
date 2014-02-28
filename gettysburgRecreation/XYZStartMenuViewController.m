@@ -6,9 +6,9 @@
 //
 //
 
-#import "XYZPickerViewController.h"
+#import "XYZStartMenuViewController.h"
 
-@interface XYZPickerViewController ()
+@interface XYZStartMenuViewController ()
 @property (weak, nonatomic) IBOutlet UIPickerView *picker;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (weak, nonatomic) IBOutlet UITextField *nameText;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation XYZPickerViewController
+@implementation XYZStartMenuViewController
 
 
 /*
