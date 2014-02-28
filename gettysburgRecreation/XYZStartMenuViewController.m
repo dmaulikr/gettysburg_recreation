@@ -9,9 +9,6 @@
 #import "XYZStartMenuViewController.h"
 
 @interface XYZStartMenuViewController ()
-@property (weak, nonatomic) IBOutlet UIPickerView *picker;
-@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
-@property (weak, nonatomic) IBOutlet UITextField *nameText;
 
 - (IBAction)textNameFieldReturn:(UITextField *)sender;
 
@@ -82,6 +79,10 @@
     _resultLabel.text = resultString;
 }
 
+
+/*
+ * Helper function for parsing the picker's selections nicely.
+ */
 -(NSString*)pickerView:(UIPickerView*)pickerView pickedRank:(NSString*)rank andSide:(NSString*)side
 {
     NSString * resultString;
@@ -101,7 +102,7 @@
     return resultString;
 }
 
-/* FIXME
+/* FIXME: Possibly dropped?
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
     _name = _nameText.text;
