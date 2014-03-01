@@ -60,9 +60,6 @@
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     
-    //_selectedRank = @"";
-    //_selectedSide = @"";
-
     if (component == 0)
     {
         _selectedRank = _ranks[row];
@@ -73,9 +70,6 @@
     }
     
     NSString * resultString = [self pickerView:pickerView pickedRank:_selectedRank andSide:_selectedSide];
-    
-    //NSString * resultString = [NSString stringWithFormat:
-    //                           @"Play as a %@ of %@", _selectedRank, _selectedSide];
     
     _resultLabel.text = resultString;
     
@@ -107,15 +101,6 @@
     return resultString;
 }
 
-/* FIXME: Possibly dropped?
--(void)textFieldDidEndEditing:(UITextField *)textField
-{
-    _name = _nameText.text;
-    
-}
- */
-
-
 /*
  * Standard ViewController methods down here.
  */
@@ -141,20 +126,6 @@
     [_startButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
 
 
-    
-    // These are horribly ugly.
-    //_startButton.layer.cornerRadius = 4;
-    //_startButton.layer.borderWidth = 2;
-    //_startButton.backgroundColor = [UIColor grayColor];
-    //_startButton.layer.borderColor = [UIColor blueColor].CGColor;
-    
-    
-    //[_picker selectedRowInComponent:2];
-    
-    //_name = _nameText.text;
-    //selectedRank = @"Major General";
-    //_name = @"";
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
