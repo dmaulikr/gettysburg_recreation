@@ -7,6 +7,7 @@
 //
 
 #import "XYZMainViewController.h"
+#import "XYZPlayer.h"
 
 @interface XYZMainViewController ()
 
@@ -28,6 +29,14 @@
     [super viewDidLoad];
     
     self.view.layer.contents = (id)[UIImage imageNamed:@"placeholderMap.png"].CGImage;
+    
+    
+    //FIXME This isn't calling the XYZPlayer constructor.  Why?
+    self.player = [self.player initWithRank:_passedRank andSide:_passedLoyalty];
+    
+    
+    //NSLog(_passedLoyalty);
+    //NSLog(_passedRank);
     //self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"placeholderMap.png"]];
 }
 

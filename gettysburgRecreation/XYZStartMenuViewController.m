@@ -1,5 +1,5 @@
 //
-//  XYZPickerViewController.m
+//  XYZStartMenuViewController.m
 //  gettysburgRecreation
 //
 //  Created by Ellen Hui on 2/26/14.
@@ -8,10 +8,11 @@
 
 #import "XYZStartMenuViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "XYZMainViewController.h"
 
 @interface XYZStartMenuViewController ()
 
-- (IBAction)textNameFieldReturn:(UITextField *)sender;
+// - (IBAction)textNameFieldReturn:(UITextField *)sender;
 
 @end
 
@@ -122,12 +123,25 @@
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"placeholderBG.jpg"]];
     
-    _ranks = @[@"General", @"Brigadier General", @"Major General"];
+    _ranks = @[@"Colonel", @"Major General", @"Brigadier General", @"General"];
     _sides = @[@"Union", @"Confederacy"];
+    
     [_startButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     _startButton.enabled = NO;
 
 
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"startGame"])
+    {
+        
+        XYZMainViewController * destViewController = segue.destinationViewController;
+        
+        destViewController.passedRank = _selectedRank;
+        destViewController.passedLoyalty = _selectedSide;
+    }
 }
 
 - (void)didReceiveMemoryWarning

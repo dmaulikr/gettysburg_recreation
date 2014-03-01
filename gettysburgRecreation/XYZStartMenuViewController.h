@@ -1,5 +1,5 @@
 //
-//  XYZPickerViewController.h
+//  XYZStartMenuViewController.h
 //  gettysburgRecreation
 //
 //  Created by Ellen Hui on 2/26/14.
