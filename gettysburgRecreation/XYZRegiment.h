@@ -47,8 +47,4 @@
 // A method that attacks (takes another regiment as input)
 
 
-
-
-
-
 @end
