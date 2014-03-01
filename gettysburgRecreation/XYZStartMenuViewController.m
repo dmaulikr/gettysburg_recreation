@@ -96,6 +96,7 @@
         resultString = [NSString stringWithFormat:
                                    @"Play as a %@ of the %@", _selectedRank, _selectedSide];
         [_startButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        _startButton.enabled = YES;
 
     }
     return resultString;
@@ -124,6 +125,7 @@
     _ranks = @[@"General", @"Brigadier General", @"Major General"];
     _sides = @[@"Union", @"Confederacy"];
     [_startButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    _startButton.enabled = NO;
 
 
 }
