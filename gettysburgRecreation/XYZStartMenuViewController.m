@@ -7,6 +7,7 @@
 //
 
 #import "XYZStartMenuViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface XYZStartMenuViewController ()
 
@@ -77,6 +78,8 @@
     //                           @"Play as a %@ of %@", _selectedRank, _selectedSide];
     
     _resultLabel.text = resultString;
+    
+    [_startButton setTitle:resultString forState:UIControlStateNormal];
 }
 
 
@@ -98,6 +101,8 @@
     {
         resultString = [NSString stringWithFormat:
                                    @"Play as a %@ of the %@", _selectedRank, _selectedSide];
+        [_startButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+
     }
     return resultString;
 }
@@ -119,6 +124,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+
         // Custom initialization
     }
     return self;
@@ -132,6 +138,16 @@
     
     _ranks = @[@"General", @"Brigadier General", @"Major General"];
     _sides = @[@"Union", @"Confederacy"];
+    [_startButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+
+
+    
+    // These are horribly ugly.
+    //_startButton.layer.cornerRadius = 4;
+    //_startButton.layer.borderWidth = 2;
+    //_startButton.backgroundColor = [UIColor grayColor];
+    //_startButton.layer.borderColor = [UIColor blueColor].CGColor;
+    
     
     //[_picker selectedRowInComponent:2];
     
