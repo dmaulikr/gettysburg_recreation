@@ -11,7 +11,9 @@
 		40069EB818BAA0EF0026FD7F /* XYZBrigade.m in Sources */ = {isa = PBXBuildFile; fileRef = 40069EB718BAA0EF0026FD7F /* XYZBrigade.m */; };
 		40203DA818A86F2400BD4566 /* XYZBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 40203DA718A86F2400BD4566 /* XYZBoard.m */; };
 		403349C318BD5203002275F2 /* XYZSoldier.m in Sources */ = {isa = PBXBuildFile; fileRef = 403349C218BD5203002275F2 /* XYZSoldier.m */; };
-		4069DED818A6D8030033C024 /* StartMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069DED718A6D8030033C024 /* StartMenu.m */; };
+		40681BBA18C1817B00F6EBCD /* XYZMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40681BB918C1817B00F6EBCD /* XYZMainView.m */; };
+		40681BBC18C181CD00F6EBCD /* placeholderMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 40681BBB18C181CD00F6EBCD /* placeholderMap.png */; };
+		40681BBF18C182BC00F6EBCD /* XYZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40681BBE18C182BC00F6EBCD /* XYZMainViewController.m */; };
 		4069DEDC18A6DA250033C024 /* StartMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4069DEDB18A6DA250033C024 /* StartMenu.storyboard */; };
 		4069DEDF18A6DE0B0033C024 /* XYZRegiment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069DEDE18A6DE0B0033C024 /* XYZRegiment.m */; };
 		4069DEE218A6ED060033C024 /* XYZTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069DEE118A6ED060033C024 /* XYZTile.m */; };
@@ -53,8 +55,11 @@
 		40203DA718A86F2400BD4566 /* XYZBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZBoard.m; sourceTree = "<group>"; };
 		403349C118BD5203002275F2 /* XYZSoldier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZSoldier.h; sourceTree = "<group>"; };
 		403349C218BD5203002275F2 /* XYZSoldier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZSoldier.m; sourceTree = "<group>"; };
-		4069DED618A6D8030033C024 /* StartMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartMenu.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.plist; };
-		4069DED718A6D8030033C024 /* StartMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartMenu.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.xcconfig; };
+		40681BB818C1817B00F6EBCD /* XYZMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZMainView.h; sourceTree = "<group>"; };
+		40681BB918C1817B00F6EBCD /* XYZMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZMainView.m; sourceTree = "<group>"; };
+		40681BBB18C181CD00F6EBCD /* placeholderMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholderMap.png; sourceTree = "<group>"; };
+		40681BBD18C182BC00F6EBCD /* XYZMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZMainViewController.h; sourceTree = "<group>"; };
+		40681BBE18C182BC00F6EBCD /* XYZMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZMainViewController.m; sourceTree = "<group>"; };
 		4069DEDB18A6DA250033C024 /* StartMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StartMenu.storyboard; sourceTree = "<group>"; };
 		4069DEDE18A6DE0B0033C024 /* XYZRegiment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZRegiment.m; sourceTree = "<group>"; };
 		4069DEE018A6ED060033C024 /* XYZTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTile.h; sourceTree = "<group>"; };
@@ -119,10 +124,12 @@
 				4069DEDB18A6DA250033C024 /* StartMenu.storyboard */,
 				D05FF67A18BF2497008B72E4 /* XYZStartMenuViewController.h */,
 				D05FF67B18BF2497008B72E4 /* XYZStartMenuViewController.m */,
-				4069DED618A6D8030033C024 /* StartMenu.h */,
-				4069DED718A6D8030033C024 /* StartMenu.m */,
+				40681BB818C1817B00F6EBCD /* XYZMainView.h */,
+				40681BB918C1817B00F6EBCD /* XYZMainView.m */,
 				40D6E74718B96E9200862AF5 /* XYZRegiment.h */,
 				4069DEDE18A6DE0B0033C024 /* XYZRegiment.m */,
+				40681BBD18C182BC00F6EBCD /* XYZMainViewController.h */,
+				40681BBE18C182BC00F6EBCD /* XYZMainViewController.m */,
 				40203DA618A86F2400BD4566 /* XYZBoard.h */,
 				40203DA718A86F2400BD4566 /* XYZBoard.m */,
 				4069DEE018A6ED060033C024 /* XYZTile.h */,
@@ -184,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				D05FF67D18C14690008B72E4 /* placeholderBG.jpg */,
+				40681BBB18C181CD00F6EBCD /* placeholderMap.png */,
 				D0332E4018A6D423007C0FF7 /* gettysburgRecreation-Info.plist */,
 				D0332E4118A6D423007C0FF7 /* InfoPlist.strings */,
 				D0332E4418A6D423007C0FF7 /* main.m */,
@@ -289,6 +297,7 @@
 				D0332E4318A6D423007C0FF7 /* InfoPlist.strings in Resources */,
 				4069DEDC18A6DA250033C024 /* StartMenu.storyboard in Resources */,
 				D0332E4B18A6D423007C0FF7 /* Images.xcassets in Resources */,
+				40681BBC18C181CD00F6EBCD /* placeholderMap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,9 +322,10 @@
 				40069EB818BAA0EF0026FD7F /* XYZBrigade.m in Sources */,
 				403349C318BD5203002275F2 /* XYZSoldier.m in Sources */,
 				D0C3308418B6626700E0E315 /* XYZInfantryRegiment.m in Sources */,
-				4069DED818A6D8030033C024 /* StartMenu.m in Sources */,
 				4069DEDF18A6DE0B0033C024 /* XYZRegiment.m in Sources */,
 				D0C3308718B662A800E0E315 /* XYZCavalryRegiment.m in Sources */,
+				40681BBA18C1817B00F6EBCD /* XYZMainView.m in Sources */,
+				40681BBF18C182BC00F6EBCD /* XYZMainViewController.m in Sources */,
 				D0C3308A18B662B100E0E315 /* XYZArtillery.m in Sources */,
 				D05FF67C18BF2497008B72E4 /* XYZStartMenuViewController.m in Sources */,
 				40069EB518BA9E100026FD7F /* XYZBattery.m in Sources */,

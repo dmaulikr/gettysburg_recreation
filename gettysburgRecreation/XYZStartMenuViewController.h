@@ -19,7 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 
 
-
 @property (strong, nonatomic) NSArray * ranks;
 @property (strong, nonatomic) NSArray * sides;
 
