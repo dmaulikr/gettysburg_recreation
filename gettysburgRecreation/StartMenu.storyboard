@@ -59,7 +59,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KVk-5G-OwP"/>
+                    <navigationItem key="navigationItem" id="KVk-5G-OwP">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="t2S-u0-ktp"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ban-nY-bSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

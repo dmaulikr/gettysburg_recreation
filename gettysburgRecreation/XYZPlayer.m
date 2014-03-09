@@ -21,6 +21,7 @@
 
 -(id)initWithRank:(NSString*)rank andSide(NSString*)side
 {
+    assert(FALSE);
     self = [super init];
     
     NSLog(@"I EXISSST");

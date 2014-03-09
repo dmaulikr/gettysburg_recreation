@@ -96,7 +96,16 @@
     {
         resultString = [NSString stringWithFormat:
                                    @"Play as a %@ of the %@", _selectedRank, _selectedSide];
-        [_startButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        if ([_selectedSide isEqualToString:(@"Union")])
+        {
+            [_startButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        }
+        
+        else if ([_selectedSide isEqualToString:(@"Confederacy")])
+        {
+            [_startButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        }
+
         _startButton.enabled = YES;
 
     }
@@ -126,8 +135,13 @@
     _ranks = @[@"Colonel", @"Major General", @"Brigadier General", @"General"];
     _sides = @[@"Union", @"Confederacy"];
     
-    [_startButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [_startButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     _startButton.enabled = NO;
+    
+    // FIXME: Trying to add default selections, failing so far.  These three lines seem to have no effect.
+    [self.picker reloadAllComponents];
+    [self.picker selectRow:0 inComponent:0 animated:NO];
+    [self.picker selectRow:0 inComponent:1 animated:NO];
 
 
 }
