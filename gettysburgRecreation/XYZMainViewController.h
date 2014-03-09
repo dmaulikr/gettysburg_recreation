@@ -13,7 +13,7 @@
 
 @property NSString * passedRank;
 @property NSString * passedLoyalty;
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property XYZPlayer * player;
 
 @end

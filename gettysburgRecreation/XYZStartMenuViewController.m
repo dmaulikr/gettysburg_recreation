@@ -9,6 +9,8 @@
 #import "XYZStartMenuViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "XYZMainViewController.h"
+#import "SWRevealViewController.h"
+
 
 @interface XYZStartMenuViewController ()
 
@@ -151,10 +153,10 @@
     if([segue.identifier isEqualToString:@"startGame"])
     {
         
-        XYZMainViewController * destViewController = segue.destinationViewController;
+        //XYZMainViewController * destViewController = segue.destinationViewController;
         
-        destViewController.passedRank = _selectedRank;
-        destViewController.passedLoyalty = _selectedSide;
+        //destViewController.passedRank = _selectedRank;
+        //destViewController.passedLoyalty = _selectedSide;
     }
 }
 

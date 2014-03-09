@@ -8,6 +8,7 @@
 
 #import "XYZMainViewController.h"
 #import "XYZPlayer.h"
+#import "SWRevealViewController.h"
 
 @interface XYZMainViewController ()
 
@@ -29,6 +30,17 @@
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = YES;
     self.view.layer.contents = (id)[UIImage imageNamed:@"placeholderMap.png"].CGImage;
+    
+    // Change button color
+    _sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
+    
+    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
+    _sidebarButton.target = self.revealViewController;
+    _sidebarButton.action = @selector(revealToggle:);
+    
+    // Set the gesture
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+
     
     //FIXME This isn't calling the XYZPlayer constructor.  Why?
     // Also not compiling as is.  WAT.

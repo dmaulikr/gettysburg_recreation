@@ -17,6 +17,9 @@
 		4069DEDC18A6DA250033C024 /* StartMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4069DEDB18A6DA250033C024 /* StartMenu.storyboard */; };
 		4069DEDF18A6DE0B0033C024 /* XYZRegiment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069DEDE18A6DE0B0033C024 /* XYZRegiment.m */; };
 		4069DEE218A6ED060033C024 /* XYZTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069DEE118A6ED060033C024 /* XYZTile.m */; };
+		D00D047118CCF4FB00252C90 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00D047018CCF4FB00252C90 /* SWRevealViewController.m */; };
+		D00D047418CCFAD700252C90 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00D047318CCFAD700252C90 /* SidebarViewController.m */; };
+		D00D047718CCFB0E00252C90 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00D047618CCFB0E00252C90 /* PhotoViewController.m */; };
 		D0332E3918A6D423007C0FF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0332E3818A6D423007C0FF7 /* Foundation.framework */; };
 		D0332E3B18A6D423007C0FF7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0332E3A18A6D423007C0FF7 /* CoreGraphics.framework */; };
 		D0332E3D18A6D423007C0FF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0332E3C18A6D423007C0FF7 /* UIKit.framework */; };
@@ -65,6 +68,12 @@
 		4069DEE018A6ED060033C024 /* XYZTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZTile.h; sourceTree = "<group>"; };
 		4069DEE118A6ED060033C024 /* XYZTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZTile.m; sourceTree = "<group>"; };
 		40D6E74718B96E9200862AF5 /* XYZRegiment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZRegiment.h; sourceTree = "<group>"; };
+		D00D046F18CCF4FB00252C90 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		D00D047018CCF4FB00252C90 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		D00D047218CCFAD700252C90 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
+		D00D047318CCFAD700252C90 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
+		D00D047518CCFB0E00252C90 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		D00D047618CCFB0E00252C90 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		D02F36C118B027490075FF6D /* XYZPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZPlayer.h; sourceTree = "<group>"; };
 		D02F36C218B027490075FF6D /* XYZPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZPlayer.m; sourceTree = "<group>"; };
 		D0332E3518A6D423007C0FF7 /* gettysburgRecreation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gettysburgRecreation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +135,12 @@
 				D05FF67B18BF2497008B72E4 /* XYZStartMenuViewController.m */,
 				40681BBD18C182BC00F6EBCD /* XYZMainViewController.h */,
 				40681BBE18C182BC00F6EBCD /* XYZMainViewController.m */,
+				D00D046F18CCF4FB00252C90 /* SWRevealViewController.h */,
+				D00D047018CCF4FB00252C90 /* SWRevealViewController.m */,
+				D00D047218CCFAD700252C90 /* SidebarViewController.h */,
+				D00D047318CCFAD700252C90 /* SidebarViewController.m */,
+				D00D047518CCFB0E00252C90 /* PhotoViewController.h */,
+				D00D047618CCFB0E00252C90 /* PhotoViewController.m */,
 				40681BB818C1817B00F6EBCD /* XYZMainView.h */,
 				40681BB918C1817B00F6EBCD /* XYZMainView.m */,
 				40D6E74718B96E9200862AF5 /* XYZRegiment.h */,
@@ -318,14 +333,17 @@
 			files = (
 				40203DA818A86F2400BD4566 /* XYZBoard.m in Sources */,
 				D0332E4918A6D423007C0FF7 /* XYZAppDelegate.m in Sources */,
+				D00D047118CCF4FB00252C90 /* SWRevealViewController.m in Sources */,
 				4069DEE218A6ED060033C024 /* XYZTile.m in Sources */,
 				40069EB818BAA0EF0026FD7F /* XYZBrigade.m in Sources */,
 				403349C318BD5203002275F2 /* XYZSoldier.m in Sources */,
 				D0C3308418B6626700E0E315 /* XYZInfantryRegiment.m in Sources */,
 				4069DEDF18A6DE0B0033C024 /* XYZRegiment.m in Sources */,
 				D0C3308718B662A800E0E315 /* XYZCavalryRegiment.m in Sources */,
+				D00D047718CCFB0E00252C90 /* PhotoViewController.m in Sources */,
 				40681BBA18C1817B00F6EBCD /* XYZMainView.m in Sources */,
 				40681BBF18C182BC00F6EBCD /* XYZMainViewController.m in Sources */,
+				D00D047418CCFAD700252C90 /* SidebarViewController.m in Sources */,
 				D0C3308A18B662B100E0E315 /* XYZArtillery.m in Sources */,
 				D05FF67C18BF2497008B72E4 /* XYZStartMenuViewController.m in Sources */,
 				40069EB518BA9E100026FD7F /* XYZBattery.m in Sources */,
