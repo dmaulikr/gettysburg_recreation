@@ -20,7 +20,8 @@
 		D03D4B5418D8FC42003F0196 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D03D4B5218D8FC42003F0196 /* InfoPlist.strings */; };
 		D03D4B5618D8FC42003F0196 /* gettysburg_recreation_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D4B5518D8FC42003F0196 /* gettysburg_recreation_2Tests.m */; };
 		D03D4B6218D8FE79003F0196 /* GBGStartMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D4B6118D8FE79003F0196 /* GBGStartMenuViewController.m */; };
-		D03D4B6518D8FEEC003F0196 /* GBGStartMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D4B6418D8FEEC003F0196 /* GBGStartMenuView.m */; };
+		D03D4B6C18D97EE7003F0196 /* GBGMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D4B6B18D97EE7003F0196 /* GBGMainViewController.m */; };
+		D03D4B6F18D97F67003F0196 /* placeholderMap.png in Resources */ = {isa = PBXBuildFile; fileRef = D03D4B6E18D97F67003F0196 /* placeholderMap.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +53,9 @@
 		D03D4B5518D8FC42003F0196 /* gettysburg_recreation_2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gettysburg_recreation_2Tests.m; sourceTree = "<group>"; };
 		D03D4B6018D8FE79003F0196 /* GBGStartMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGStartMenuViewController.h; sourceTree = "<group>"; };
 		D03D4B6118D8FE79003F0196 /* GBGStartMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGStartMenuViewController.m; sourceTree = "<group>"; };
-		D03D4B6318D8FEEC003F0196 /* GBGStartMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGStartMenuView.h; sourceTree = "<group>"; };
-		D03D4B6418D8FEEC003F0196 /* GBGStartMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGStartMenuView.m; sourceTree = "<group>"; };
+		D03D4B6A18D97EE7003F0196 /* GBGMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGMainViewController.h; sourceTree = "<group>"; };
+		D03D4B6B18D97EE7003F0196 /* GBGMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGMainViewController.m; sourceTree = "<group>"; };
+		D03D4B6E18D97F67003F0196 /* placeholderMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholderMap.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +117,10 @@
 			children = (
 				D03D4B3F18D8FC42003F0196 /* GBGAppDelegate.h */,
 				D03D4B4018D8FC42003F0196 /* GBGAppDelegate.m */,
+				D03D4B6D18D97F08003F0196 /* Main View */,
 				D03D4B6618D8FEF1003F0196 /* Start Menu */,
 				D03D4B4218D8FC42003F0196 /* Images.xcassets */,
+				D03D4B6E18D97F67003F0196 /* placeholderMap.png */,
 				D03D4B3718D8FC42003F0196 /* Supporting Files */,
 			);
 			path = "gettysburg-recreation-2";
@@ -154,12 +158,19 @@
 		D03D4B6618D8FEF1003F0196 /* Start Menu */ = {
 			isa = PBXGroup;
 			children = (
-				D03D4B6318D8FEEC003F0196 /* GBGStartMenuView.h */,
-				D03D4B6418D8FEEC003F0196 /* GBGStartMenuView.m */,
 				D03D4B6018D8FE79003F0196 /* GBGStartMenuViewController.h */,
 				D03D4B6118D8FE79003F0196 /* GBGStartMenuViewController.m */,
 			);
 			name = "Start Menu";
+			sourceTree = "<group>";
+		};
+		D03D4B6D18D97F08003F0196 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				D03D4B6A18D97EE7003F0196 /* GBGMainViewController.h */,
+				D03D4B6B18D97EE7003F0196 /* GBGMainViewController.m */,
+			);
+			name = "Main View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +251,7 @@
 			files = (
 				D03D4B3B18D8FC42003F0196 /* InfoPlist.strings in Resources */,
 				D03D4B4318D8FC42003F0196 /* Images.xcassets in Resources */,
+				D03D4B6F18D97F67003F0196 /* placeholderMap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +272,8 @@
 			files = (
 				D03D4B3D18D8FC42003F0196 /* main.m in Sources */,
 				D03D4B4118D8FC42003F0196 /* GBGAppDelegate.m in Sources */,
+				D03D4B6C18D97EE7003F0196 /* GBGMainViewController.m in Sources */,
 				D03D4B6218D8FE79003F0196 /* GBGStartMenuViewController.m in Sources */,
-				D03D4B6518D8FEEC003F0196 /* GBGStartMenuView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

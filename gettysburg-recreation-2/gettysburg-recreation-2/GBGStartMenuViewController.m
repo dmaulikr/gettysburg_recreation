@@ -7,6 +7,7 @@
 //
 
 #import "GBGStartMenuViewController.h"
+#import "GBGMainViewController.h"
 
 @interface GBGStartMenuViewController ()
 
@@ -18,29 +19,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-
-        // Set up the data for rank/side.
-        _ranks = @[@"Colonel", @"Major General", @"Brigadier General", @"General"];
-        _sides = @[@"Union", @"Confederacy"];
-        
-        // Create rank/side selector.
-        _optionSelector = [[UIPickerView alloc] initWithFrame:CGRectMake(150, 400, 500, 500)];
-        _optionSelector.delegate = self;
-        _optionSelector.showsSelectionIndicator = YES;
-        
-        // Create start button.
-        _startButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        _startButton.frame = CGRectMake(100, 200, 600, 300);
-        _startButtonLabel = @"Choose a rank and side!";
-        
-        // Set up start button.
-        [_startButton setTitle:_startButtonLabel forState:UIControlStateNormal];
-        [_startButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_startButton.titleLabel setFont:[UIFont systemFontOfSize:25]];
-
-        // Add start button and rank/side selector as subviews.
-        [self.view addSubview:_startButton];
-        [self.view addSubview:_optionSelector];
     }
     return self;
 }
@@ -50,6 +28,32 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Set up the data for rank/side.
+    _ranks = @[@"Colonel", @"Major General", @"Brigadier General", @"General"];
+    _sides = @[@"Union", @"Confederacy"];
+    
+    // Create rank/side selector.
+    _optionSelector = [[UIPickerView alloc] initWithFrame:CGRectMake(150, 400, 500, 500)];
+    _optionSelector.delegate = self;
+    _optionSelector.showsSelectionIndicator = YES;
+    
+    // Create start button.
+    _startButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    _startButton.frame = CGRectMake(100, 200, 600, 300);
+    _startButtonLabel = @"Choose a rank and side!";
+    
+    // Set up start button.
+    [_startButton setTitle:_startButtonLabel forState:UIControlStateNormal];
+    [_startButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_startButton.titleLabel setFont:[UIFont systemFontOfSize:25]];
+    
+    // Add start button and rank/side selector as subviews.
+    [self.view addSubview:_startButton];
+    [self.view addSubview:_optionSelector];
+    
+    [_startButton addTarget:self action:@selector(didPressButton:) forControlEvents:UIControlEventTouchUpInside];
+
 
     // FIXME: With this line, the button only changes label once both rank and side are selected.
     _startButton.enabled = NO;
@@ -105,8 +109,6 @@
     NSString * resultString = [self pickerView:pickerView pickedRank:_selectedRank andSide:_selectedSide];
     
     [_startButton setTitle:resultString forState:UIControlStateNormal];
-
-
 }
 
 /*
@@ -141,6 +143,16 @@
     }
     return resultString;
 }
+
+#pragma mark - ButtonClick
+
+- (void)didPressButton:(UIButton *)sender
+{
+    GBGMainViewController *mainViewController = [[GBGMainViewController alloc] init];
+    [self.navigationController pushViewController:mainViewController animated:YES];
+}
+
+
 
 
 

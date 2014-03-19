@@ -9,14 +9,20 @@
 #import "GBGAppDelegate.h"
 #import "GBGStartMenuViewController.h"
 
+
 @implementation GBGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    GBGStartMenuViewController *startView = [[GBGStartMenuViewController alloc] init];
-    self.window.rootViewController = startView;
+    
+    GBGStartMenuViewController *startViewController = [[GBGStartMenuViewController alloc] init];
+
+    UINavigationController *navController =
+        [[UINavigationController alloc] initWithRootViewController:startViewController];
+    
+    self.window.rootViewController = navController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
