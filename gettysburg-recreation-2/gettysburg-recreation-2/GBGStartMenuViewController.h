@@ -11,7 +11,15 @@
 @interface GBGStartMenuViewController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (nonatomic, strong) UIPickerView *optionSelector;
-@property (nonatomic, strong) NSArray * ranks;
-@property (nonatomic, strong) NSArray * sides;
+@property (nonatomic, strong) UIButton *startButton;
+
+@property (nonatomic, strong) NSString *startButtonLabel;
+
+@property (nonatomic, strong) NSArray *ranks;
+@property (nonatomic, strong) NSArray *sides;
+
+@property (nonatomic, strong) NSString *selectedRank;
+@property (nonatomic, strong) NSString *selectedSide;
+
 
 @end

@@ -14,20 +14,33 @@
 
 @implementation GBGStartMenuViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 
+        // Set up the data for rank/side.
         _ranks = @[@"Colonel", @"Major General", @"Brigadier General", @"General"];
         _sides = @[@"Union", @"Confederacy"];
         
-        
-        _optionSelector = [[UIPickerView alloc] initWithFrame:CGRectMake(150, 300, 500, 500)];
+        // Create rank/side selector.
+        _optionSelector = [[UIPickerView alloc] initWithFrame:CGRectMake(150, 400, 500, 500)];
         _optionSelector.delegate = self;
         _optionSelector.showsSelectionIndicator = YES;
+        
+        // Create start button.
+        _startButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        _startButton.frame = CGRectMake(100, 200, 600, 300);
+        _startButtonLabel = @"Choose a rank and side!";
+        
+        // Set up start button.
+        [_startButton setTitle:_startButtonLabel forState:UIControlStateNormal];
+        [_startButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_startButton.titleLabel setFont:[UIFont systemFontOfSize:25]];
+
+        // Add start button and rank/side selector as subviews.
+        [self.view addSubview:_startButton];
         [self.view addSubview:_optionSelector];
-        // Custom initialization
     }
     return self;
 }
@@ -37,6 +50,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    // FIXME: With this line, the button only changes label once both rank and side are selected.
+    _startButton.enabled = NO;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,9 +62,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
- * DataSource Methods;
- */
+#pragma mark - UIPickerViewDataSource
+
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 2;   // Component 0 will be the ranks
@@ -74,6 +90,57 @@
     }
 }
 
+
+#pragma mark - UIPickerViewDelegate
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    if (component == 0) {
+        _selectedRank = _ranks[row];
+    }
+    else {
+        _selectedSide = _sides[row];
+    }
+    
+    NSString * resultString = [self pickerView:pickerView pickedRank:_selectedRank andSide:_selectedSide];
+    
+    [_startButton setTitle:resultString forState:UIControlStateNormal];
+
+
+}
+
+/*
+ * Helper function for parsing the picker's selections nicely.
+ */
+-(NSString*)pickerView:(UIPickerView*)pickerView pickedRank:(NSString*)rank andSide:(NSString*)side
+{
+    NSString * resultString;
+    if (rank == NULL) {
+        resultString = [NSString stringWithFormat: @"Play for the %@", side];
+
+    }
+    
+    else if (side == NULL) {
+        resultString = [NSString stringWithFormat:@"Play as a %@", rank];
+    }
+    
+    else {
+        resultString = [NSString stringWithFormat:
+                        @"Play as a %@ of the %@!", _selectedRank, _selectedSide];
+        
+        if ([_selectedSide isEqualToString:(@"Union")]) {
+            [_startButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        }
+        
+        else if ([_selectedSide isEqualToString:(@"Confederacy")]) {
+            [_startButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        }
+        
+        _startButton.enabled = YES;
+        
+    }
+    return resultString;
+}
 
 
 
