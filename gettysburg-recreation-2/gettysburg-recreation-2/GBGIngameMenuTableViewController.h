@@ -1,5 +1,5 @@
 //
-//  GBGMainViewController.h
+//  GBGIngameMenuTableViewController.h
 //  gettysburg-recreation-2
 //
 //  Created by Ellen Hui on 3/19/14.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GBGMainViewController : UIViewController
-
+@interface GBGIngameMenuTableViewController : UITableViewController
 
 @end

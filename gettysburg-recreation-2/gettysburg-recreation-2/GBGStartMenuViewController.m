@@ -8,6 +8,8 @@
 
 #import "GBGStartMenuViewController.h"
 #import "GBGMainViewController.h"
+#import "GBGIngameMenuTableViewController.h"
+
 
 @interface GBGStartMenuViewController ()
 
@@ -149,7 +151,12 @@
 - (void)didPressButton:(UIButton *)sender
 {
     GBGMainViewController *mainViewController = [[GBGMainViewController alloc] init];
-    [self.navigationController pushViewController:mainViewController animated:YES];
+    GBGIngameMenuTableViewController *gameMenuController = [[GBGIngameMenuTableViewController alloc] init];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = @[mainViewController, gameMenuController];
+
+    [self.navigationController pushViewController:tabBarController animated:YES];
 }
 
 

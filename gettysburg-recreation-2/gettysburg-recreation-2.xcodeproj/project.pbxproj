@@ -22,6 +22,10 @@
 		D03D4B6218D8FE79003F0196 /* GBGStartMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D4B6118D8FE79003F0196 /* GBGStartMenuViewController.m */; };
 		D03D4B6C18D97EE7003F0196 /* GBGMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D4B6B18D97EE7003F0196 /* GBGMainViewController.m */; };
 		D03D4B6F18D97F67003F0196 /* placeholderMap.png in Resources */ = {isa = PBXBuildFile; fileRef = D03D4B6E18D97F67003F0196 /* placeholderMap.png */; };
+		D03D4B7718DA5CA5003F0196 /* Smiley.png in Resources */ = {isa = PBXBuildFile; fileRef = D03D4B7618DA5CA5003F0196 /* Smiley.png */; };
+		D03D4B7B18DA5F24003F0196 /* NComp.png in Resources */ = {isa = PBXBuildFile; fileRef = D03D4B7A18DA5F24003F0196 /* NComp.png */; };
+		D03D4B7D18DA5F27003F0196 /* NComp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D03D4B7C18DA5F27003F0196 /* NComp@2x.png */; };
+		D03D4B8018DA6C2C003F0196 /* GBGIngameMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D4B7F18DA6C2C003F0196 /* GBGIngameMenuTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,11 @@
 		D03D4B6A18D97EE7003F0196 /* GBGMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGMainViewController.h; sourceTree = "<group>"; };
 		D03D4B6B18D97EE7003F0196 /* GBGMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGMainViewController.m; sourceTree = "<group>"; };
 		D03D4B6E18D97F67003F0196 /* placeholderMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholderMap.png; sourceTree = "<group>"; };
+		D03D4B7618DA5CA5003F0196 /* Smiley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Smiley.png; sourceTree = "<group>"; };
+		D03D4B7A18DA5F24003F0196 /* NComp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NComp.png; sourceTree = "<group>"; };
+		D03D4B7C18DA5F27003F0196 /* NComp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NComp@2x.png"; sourceTree = "<group>"; };
+		D03D4B7E18DA6C2C003F0196 /* GBGIngameMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGIngameMenuTableViewController.h; sourceTree = "<group>"; };
+		D03D4B7F18DA6C2C003F0196 /* GBGIngameMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGIngameMenuTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +126,12 @@
 			children = (
 				D03D4B3F18D8FC42003F0196 /* GBGAppDelegate.h */,
 				D03D4B4018D8FC42003F0196 /* GBGAppDelegate.m */,
-				D03D4B6D18D97F08003F0196 /* Main View */,
+				D03D4B6D18D97F08003F0196 /* Game View */,
 				D03D4B6618D8FEF1003F0196 /* Start Menu */,
 				D03D4B4218D8FC42003F0196 /* Images.xcassets */,
+				D03D4B7618DA5CA5003F0196 /* Smiley.png */,
+				D03D4B7C18DA5F27003F0196 /* NComp@2x.png */,
+				D03D4B7A18DA5F24003F0196 /* NComp.png */,
 				D03D4B6E18D97F67003F0196 /* placeholderMap.png */,
 				D03D4B3718D8FC42003F0196 /* Supporting Files */,
 			);
@@ -164,13 +176,15 @@
 			name = "Start Menu";
 			sourceTree = "<group>";
 		};
-		D03D4B6D18D97F08003F0196 /* Main View */ = {
+		D03D4B6D18D97F08003F0196 /* Game View */ = {
 			isa = PBXGroup;
 			children = (
 				D03D4B6A18D97EE7003F0196 /* GBGMainViewController.h */,
 				D03D4B6B18D97EE7003F0196 /* GBGMainViewController.m */,
+				D03D4B7E18DA6C2C003F0196 /* GBGIngameMenuTableViewController.h */,
+				D03D4B7F18DA6C2C003F0196 /* GBGIngameMenuTableViewController.m */,
 			);
-			name = "Main View";
+			name = "Game View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +263,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D03D4B7718DA5CA5003F0196 /* Smiley.png in Resources */,
 				D03D4B3B18D8FC42003F0196 /* InfoPlist.strings in Resources */,
 				D03D4B4318D8FC42003F0196 /* Images.xcassets in Resources */,
 				D03D4B6F18D97F67003F0196 /* placeholderMap.png in Resources */,
+				D03D4B7D18DA5F27003F0196 /* NComp@2x.png in Resources */,
+				D03D4B7B18DA5F24003F0196 /* NComp.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D03D4B8018DA6C2C003F0196 /* GBGIngameMenuTableViewController.m in Sources */,
 				D03D4B3D18D8FC42003F0196 /* main.m in Sources */,
 				D03D4B4118D8FC42003F0196 /* GBGAppDelegate.m in Sources */,
 				D03D4B6C18D97EE7003F0196 /* GBGMainViewController.m in Sources */,
