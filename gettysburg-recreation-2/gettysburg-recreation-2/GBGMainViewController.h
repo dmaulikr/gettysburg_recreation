@@ -12,7 +12,7 @@
 @interface GBGMainViewController : UIViewController
 
 @property (nonatomic, strong) UIScrollView *scrollView;
-@property (nonatomic, strong) UIView *mainView;
+@property (nonatomic, strong) UIView *map;
 
 
 @end
