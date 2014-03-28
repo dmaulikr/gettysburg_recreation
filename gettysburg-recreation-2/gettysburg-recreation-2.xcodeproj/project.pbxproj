@@ -24,6 +24,15 @@
 		D03D4B6F18D97F67003F0196 /* placeholderMap.png in Resources */ = {isa = PBXBuildFile; fileRef = D03D4B6E18D97F67003F0196 /* placeholderMap.png */; };
 		D03D4B8018DA6C2C003F0196 /* GBGIngameMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D4B7F18DA6C2C003F0196 /* GBGIngameMenuTableViewController.m */; };
 		D058447D18E54EA5007C2F6F /* GBGMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D058447C18E54EA5007C2F6F /* GBGMainView.m */; };
+		D058448718E61351007C2F6F /* confederate_cannon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D058447E18E61351007C2F6F /* confederate_cannon.jpg */; };
+		D058448818E61351007C2F6F /* Confederate_cavalry_Sprites.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D058447F18E61351007C2F6F /* Confederate_cavalry_Sprites.jpg */; };
+		D058448918E61351007C2F6F /* Confederate_Soldier_Firing_Sprites.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D058448018E61351007C2F6F /* Confederate_Soldier_Firing_Sprites.jpg */; };
+		D058448A18E61351007C2F6F /* Confederate_Soldier_Marching_Sprites.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D058448118E61351007C2F6F /* Confederate_Soldier_Marching_Sprites.jpg */; };
+		D058448B18E61351007C2F6F /* gettysburg_map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D058448218E61351007C2F6F /* gettysburg_map.jpg */; };
+		D058448C18E61351007C2F6F /* Union_Cannon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D058448318E61351007C2F6F /* Union_Cannon.jpg */; };
+		D058448D18E61351007C2F6F /* Union_cavalry_Sprites.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D058448418E61351007C2F6F /* Union_cavalry_Sprites.jpg */; };
+		D058448E18E61351007C2F6F /* Union_Soldier_Firing_Sprites.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D058448518E61351007C2F6F /* Union_Soldier_Firing_Sprites.jpg */; };
+		D058448F18E61351007C2F6F /* Union_Soldier_Marching_Sprites.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D058448618E61351007C2F6F /* Union_Soldier_Marching_Sprites.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +71,15 @@
 		D03D4B7F18DA6C2C003F0196 /* GBGIngameMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGIngameMenuTableViewController.m; sourceTree = "<group>"; };
 		D058447B18E54EA5007C2F6F /* GBGMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGMainView.h; sourceTree = "<group>"; };
 		D058447C18E54EA5007C2F6F /* GBGMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGMainView.m; sourceTree = "<group>"; };
+		D058447E18E61351007C2F6F /* confederate_cannon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = confederate_cannon.jpg; sourceTree = "<group>"; };
+		D058447F18E61351007C2F6F /* Confederate_cavalry_Sprites.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Confederate_cavalry_Sprites.jpg; sourceTree = "<group>"; };
+		D058448018E61351007C2F6F /* Confederate_Soldier_Firing_Sprites.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Confederate_Soldier_Firing_Sprites.jpg; sourceTree = "<group>"; };
+		D058448118E61351007C2F6F /* Confederate_Soldier_Marching_Sprites.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Confederate_Soldier_Marching_Sprites.jpg; sourceTree = "<group>"; };
+		D058448218E61351007C2F6F /* gettysburg_map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gettysburg_map.jpg; sourceTree = "<group>"; };
+		D058448318E61351007C2F6F /* Union_Cannon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Union_Cannon.jpg; sourceTree = "<group>"; };
+		D058448418E61351007C2F6F /* Union_cavalry_Sprites.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Union_cavalry_Sprites.jpg; sourceTree = "<group>"; };
+		D058448518E61351007C2F6F /* Union_Soldier_Firing_Sprites.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Union_Soldier_Firing_Sprites.jpg; sourceTree = "<group>"; };
+		D058448618E61351007C2F6F /* Union_Soldier_Marching_Sprites.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Union_Soldier_Marching_Sprites.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +144,7 @@
 				D03D4B6D18D97F08003F0196 /* Game View */,
 				D03D4B6618D8FEF1003F0196 /* Start Menu */,
 				D03D4B4218D8FC42003F0196 /* Images.xcassets */,
-				D03D4B6E18D97F67003F0196 /* placeholderMap.png */,
+				D058449018E6135C007C2F6F /* graphics */,
 				D03D4B3718D8FC42003F0196 /* Supporting Files */,
 			);
 			path = "gettysburg-recreation-2";
@@ -181,6 +199,23 @@
 				D03D4B7F18DA6C2C003F0196 /* GBGIngameMenuTableViewController.m */,
 			);
 			name = "Game View";
+			sourceTree = "<group>";
+		};
+		D058449018E6135C007C2F6F /* graphics */ = {
+			isa = PBXGroup;
+			children = (
+				D058447E18E61351007C2F6F /* confederate_cannon.jpg */,
+				D058447F18E61351007C2F6F /* Confederate_cavalry_Sprites.jpg */,
+				D058448018E61351007C2F6F /* Confederate_Soldier_Firing_Sprites.jpg */,
+				D058448118E61351007C2F6F /* Confederate_Soldier_Marching_Sprites.jpg */,
+				D058448218E61351007C2F6F /* gettysburg_map.jpg */,
+				D058448318E61351007C2F6F /* Union_Cannon.jpg */,
+				D058448418E61351007C2F6F /* Union_cavalry_Sprites.jpg */,
+				D058448518E61351007C2F6F /* Union_Soldier_Firing_Sprites.jpg */,
+				D058448618E61351007C2F6F /* Union_Soldier_Marching_Sprites.jpg */,
+				D03D4B6E18D97F67003F0196 /* placeholderMap.png */,
+			);
+			name = graphics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +295,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D03D4B3B18D8FC42003F0196 /* InfoPlist.strings in Resources */,
+				D058448918E61351007C2F6F /* Confederate_Soldier_Firing_Sprites.jpg in Resources */,
+				D058448C18E61351007C2F6F /* Union_Cannon.jpg in Resources */,
+				D058448718E61351007C2F6F /* confederate_cannon.jpg in Resources */,
 				D03D4B4318D8FC42003F0196 /* Images.xcassets in Resources */,
+				D058448D18E61351007C2F6F /* Union_cavalry_Sprites.jpg in Resources */,
 				D03D4B6F18D97F67003F0196 /* placeholderMap.png in Resources */,
+				D058448A18E61351007C2F6F /* Confederate_Soldier_Marching_Sprites.jpg in Resources */,
+				D058448F18E61351007C2F6F /* Union_Soldier_Marching_Sprites.jpg in Resources */,
+				D058448B18E61351007C2F6F /* gettysburg_map.jpg in Resources */,
+				D058448E18E61351007C2F6F /* Union_Soldier_Firing_Sprites.jpg in Resources */,
+				D058448818E61351007C2F6F /* Confederate_cavalry_Sprites.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
