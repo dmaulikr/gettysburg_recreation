@@ -26,6 +26,7 @@
 		D03D4B7B18DA5F24003F0196 /* NComp.png in Resources */ = {isa = PBXBuildFile; fileRef = D03D4B7A18DA5F24003F0196 /* NComp.png */; };
 		D03D4B7D18DA5F27003F0196 /* NComp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D03D4B7C18DA5F27003F0196 /* NComp@2x.png */; };
 		D03D4B8018DA6C2C003F0196 /* GBGIngameMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D4B7F18DA6C2C003F0196 /* GBGIngameMenuTableViewController.m */; };
+		D058447D18E54EA5007C2F6F /* GBGMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D058447C18E54EA5007C2F6F /* GBGMainView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		D03D4B7C18DA5F27003F0196 /* NComp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NComp@2x.png"; sourceTree = "<group>"; };
 		D03D4B7E18DA6C2C003F0196 /* GBGIngameMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGIngameMenuTableViewController.h; sourceTree = "<group>"; };
 		D03D4B7F18DA6C2C003F0196 /* GBGIngameMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGIngameMenuTableViewController.m; sourceTree = "<group>"; };
+		D058447B18E54EA5007C2F6F /* GBGMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGMainView.h; sourceTree = "<group>"; };
+		D058447C18E54EA5007C2F6F /* GBGMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGMainView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +184,8 @@
 			children = (
 				D03D4B6A18D97EE7003F0196 /* GBGMainViewController.h */,
 				D03D4B6B18D97EE7003F0196 /* GBGMainViewController.m */,
+				D058447B18E54EA5007C2F6F /* GBGMainView.h */,
+				D058447C18E54EA5007C2F6F /* GBGMainView.m */,
 				D03D4B7E18DA6C2C003F0196 /* GBGIngameMenuTableViewController.h */,
 				D03D4B7F18DA6C2C003F0196 /* GBGIngameMenuTableViewController.m */,
 			);
@@ -289,6 +294,7 @@
 			files = (
 				D03D4B8018DA6C2C003F0196 /* GBGIngameMenuTableViewController.m in Sources */,
 				D03D4B3D18D8FC42003F0196 /* main.m in Sources */,
+				D058447D18E54EA5007C2F6F /* GBGMainView.m in Sources */,
 				D03D4B4118D8FC42003F0196 /* GBGAppDelegate.m in Sources */,
 				D03D4B6C18D97EE7003F0196 /* GBGMainViewController.m in Sources */,
 				D03D4B6218D8FE79003F0196 /* GBGStartMenuViewController.m in Sources */,
@@ -490,6 +496,7 @@
 				D03D4B5B18D8FC42003F0196 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D03D4B5C18D8FC42003F0196 /* Build configuration list for PBXNativeTarget "gettysburg-recreation-2Tests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +505,7 @@
 				D03D4B5E18D8FC42003F0196 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -36,13 +36,13 @@
     _sides = @[@"Union", @"Confederacy"];
     
     // Create rank/side selector.
-    _optionSelector = [[UIPickerView alloc] initWithFrame:CGRectMake(150, 400, 500, 500)];
+    _optionSelector = [[UIPickerView alloc] initWithFrame:CGRectMake(150, 300, 500, 500)];
     _optionSelector.delegate = self;
     _optionSelector.showsSelectionIndicator = YES;
     
     // Create start button.
     _startButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _startButton.frame = CGRectMake(100, 200, 600, 300);
+    _startButton.frame = CGRectMake(100, 100, 600, 300);
     _startButtonLabel = @"Choose a rank and side!";
     
     // Set up start button.
@@ -150,14 +150,20 @@
 
 - (void)didPressButton:(UIButton *)sender
 {
-    GBGMainViewController *mainViewController = [[GBGMainViewController alloc] init];
-    GBGIngameMenuTableViewController *gameMenuController = [[GBGIngameMenuTableViewController alloc] init];
+    if (sender == _startButton) {
+        GBGMainViewController *mainViewController = [[GBGMainViewController alloc] init];
+        
+        //GBGIngameMenuTableViewController *gameMenuController = [[GBGIngameMenuTableViewController alloc] init];
     
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[mainViewController, gameMenuController];
+        //UITabBarController *tabBarController = [[UITabBarController alloc] init];
+        //tabBarController.viewControllers = @[mainViewController, gameMenuController];
+        [self.navigationController setViewControllers:[NSArray arrayWithObject:mainViewController] animated:YES];
 
-    [self.navigationController pushViewController:tabBarController animated:YES];
+
+        //[self.navigationController pushViewController:mainViewController animated:YES];
+    }
 }
+
 
 
 

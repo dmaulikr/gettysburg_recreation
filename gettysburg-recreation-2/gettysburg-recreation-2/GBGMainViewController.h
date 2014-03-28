@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GBGMainView.h"
 
 @interface GBGMainViewController : UIViewController
+
+@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UIView *mainView;
 
 
 @end
