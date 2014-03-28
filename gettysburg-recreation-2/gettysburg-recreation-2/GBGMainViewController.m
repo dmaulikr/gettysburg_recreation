@@ -38,7 +38,7 @@
     _map = [[UIView alloc] initWithFrame:bigRect];
     
     // Give the map a picture.
-    _map.layer.contents = (id)[UIImage imageNamed:@"placeholderMap.png"].CGImage;
+    _map.layer.contents = (id)[UIImage imageNamed:@"gettysburg_map.png"].CGImage;
     
     // Add both views to the main view.
     [self.view addSubview:_scrollView];
