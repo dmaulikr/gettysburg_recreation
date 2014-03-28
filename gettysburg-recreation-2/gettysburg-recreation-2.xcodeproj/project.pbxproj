@@ -21,8 +21,6 @@
 		D03D4B5618D8FC42003F0196 /* gettysburg_recreation_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D4B5518D8FC42003F0196 /* gettysburg_recreation_2Tests.m */; };
 		D03D4B6218D8FE79003F0196 /* GBGStartMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D4B6118D8FE79003F0196 /* GBGStartMenuViewController.m */; };
 		D03D4B6C18D97EE7003F0196 /* GBGMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D4B6B18D97EE7003F0196 /* GBGMainViewController.m */; };
-		D03D4B8018DA6C2C003F0196 /* GBGIngameMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D4B7F18DA6C2C003F0196 /* GBGIngameMenuTableViewController.m */; };
-		D058447D18E54EA5007C2F6F /* GBGMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D058447C18E54EA5007C2F6F /* GBGMainView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,10 +54,6 @@
 		D03D4B6118D8FE79003F0196 /* GBGStartMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGStartMenuViewController.m; sourceTree = "<group>"; };
 		D03D4B6A18D97EE7003F0196 /* GBGMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGMainViewController.h; sourceTree = "<group>"; };
 		D03D4B6B18D97EE7003F0196 /* GBGMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGMainViewController.m; sourceTree = "<group>"; };
-		D03D4B7E18DA6C2C003F0196 /* GBGIngameMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGIngameMenuTableViewController.h; sourceTree = "<group>"; };
-		D03D4B7F18DA6C2C003F0196 /* GBGIngameMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGIngameMenuTableViewController.m; sourceTree = "<group>"; };
-		D058447B18E54EA5007C2F6F /* GBGMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGMainView.h; sourceTree = "<group>"; };
-		D058447C18E54EA5007C2F6F /* GBGMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGMainView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,10 +167,6 @@
 			children = (
 				D03D4B6A18D97EE7003F0196 /* GBGMainViewController.h */,
 				D03D4B6B18D97EE7003F0196 /* GBGMainViewController.m */,
-				D058447B18E54EA5007C2F6F /* GBGMainView.h */,
-				D058447C18E54EA5007C2F6F /* GBGMainView.m */,
-				D03D4B7E18DA6C2C003F0196 /* GBGIngameMenuTableViewController.h */,
-				D03D4B7F18DA6C2C003F0196 /* GBGIngameMenuTableViewController.m */,
 			);
 			name = "Game View";
 			sourceTree = "<group>";
@@ -284,9 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D03D4B8018DA6C2C003F0196 /* GBGIngameMenuTableViewController.m in Sources */,
 				D03D4B3D18D8FC42003F0196 /* main.m in Sources */,
-				D058447D18E54EA5007C2F6F /* GBGMainView.m in Sources */,
 				D03D4B4118D8FC42003F0196 /* GBGAppDelegate.m in Sources */,
 				D03D4B6C18D97EE7003F0196 /* GBGMainViewController.m in Sources */,
 				D03D4B6218D8FE79003F0196 /* GBGStartMenuViewController.m in Sources */,

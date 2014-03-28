@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GBGMainView.h"
 
 @interface GBGMainViewController : UIViewController
 
