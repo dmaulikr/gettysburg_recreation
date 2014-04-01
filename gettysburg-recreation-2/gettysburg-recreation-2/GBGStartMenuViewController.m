@@ -31,7 +31,7 @@
     // Do any additional setup after loading the view.
     
     // Set up the data for rank/side.
-    _ranks = @[@"Colonel", @"Major General", @"Brigadier General", @"General"];
+    _ranks = @[@"Colonel", @"Brigadier General", @"Major General", @"General"];
     _sides = @[@"Union", @"Confederacy"];
     
     // Create rank/side selector.
@@ -102,9 +102,11 @@
 {
     if (component == 0) {
         _selectedRank = _ranks[row];
+        _selectedRankNum = row;
     }
     else {
         _selectedSide = _sides[row];
+        _selectedSideNum = row;
     }
     
     NSString * resultString = [self pickerView:pickerView pickedRank:_selectedRank andSide:_selectedSide];
@@ -151,11 +153,15 @@
 {
     if (sender == _startButton) {
         GBGMainViewController *mainViewController = [[GBGMainViewController alloc] init];
+        mainViewController.side = _selectedSideNum;
+        mainViewController.rank = _selectedRankNum;
         
         //GBGIngameMenuTableViewController *gameMenuController = [[GBGIngameMenuTableViewController alloc] init];
     
         //UITabBarController *tabBarController = [[UITabBarController alloc] init];
         //tabBarController.viewControllers = @[mainViewController, gameMenuController];
+        
+        // Since we never want to go back to start menu, just replace it on the navigation stack.
         [self.navigationController setViewControllers:[NSArray arrayWithObject:mainViewController] animated:YES];
 
 

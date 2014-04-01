@@ -48,6 +48,14 @@
     _scrollView.contentSize = bigRect.size;
 
     
+    // FIXME(DEBUG): are we passing values from the start menu?
+    NSLog(@"side: %i", _side);
+    NSLog(@"rank: %i", _rank);
+    
+    _player = [[GBGPlayer alloc]initWithRank:_rank andSide:_side];
+    
+    // FIXME(DEBUG): are we creating a player?
+    assert(_player);
 }
 
 - (void)didReceiveMemoryWarning

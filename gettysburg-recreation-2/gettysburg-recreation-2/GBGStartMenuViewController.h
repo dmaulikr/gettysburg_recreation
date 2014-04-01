@@ -21,5 +21,7 @@
 @property (nonatomic, strong) NSString *selectedRank;
 @property (nonatomic, strong) NSString *selectedSide;
 
+@property (nonatomic) NSInteger selectedRankNum;
+@property (nonatomic) NSInteger selectedSideNum;
 
 @end
