@@ -10,7 +10,6 @@
 
 @interface GBGPlayer : NSObject
 
-
 typedef NS_ENUM(NSUInteger, Rank) {
     Colonel = 0,
     BrigadierGeneral = 1,
@@ -24,11 +23,14 @@ typedef NS_ENUM(NSUInteger, Loyalty) {
 };
 
 
-@property Rank rank;
-@property Loyalty loyalty;
+@property (nonatomic) Rank rank;
+@property (nonatomic) Loyalty loyalty;
 
-@property NSMutableArray *regiments;
+@property (nonatomic, strong) NSMutableArray *controlledRegiments;
+@property (nonatomic, strong) NSMutableArray *aiRegiments;
 
--(id)initWithRank:(NSInteger)rank andSide:(NSInteger)side;
+// Custom initializer.
+// FIXME: Turn this into default initializer?  Overwrite init?
+-(id)initWithRank:(Rank)rank andSide:(Loyalty)side;
 
 @end

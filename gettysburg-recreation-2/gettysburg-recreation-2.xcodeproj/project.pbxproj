@@ -21,6 +21,8 @@
 		D03D4B5618D8FC42003F0196 /* gettysburg_recreation_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D4B5518D8FC42003F0196 /* gettysburg_recreation_2Tests.m */; };
 		D03D4B6218D8FE79003F0196 /* GBGStartMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D4B6118D8FE79003F0196 /* GBGStartMenuViewController.m */; };
 		D03D4B6C18D97EE7003F0196 /* GBGMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D4B6B18D97EE7003F0196 /* GBGMainViewController.m */; };
+		D0DB170F18EA592000F78AE6 /* GBGPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB170E18EA592000F78AE6 /* GBGPlayer.m */; };
+		D0DB171318EA712400F78AE6 /* GBGRegiment.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB171218EA712400F78AE6 /* GBGRegiment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		D03D4B6118D8FE79003F0196 /* GBGStartMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGStartMenuViewController.m; sourceTree = "<group>"; };
 		D03D4B6A18D97EE7003F0196 /* GBGMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGMainViewController.h; sourceTree = "<group>"; };
 		D03D4B6B18D97EE7003F0196 /* GBGMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGMainViewController.m; sourceTree = "<group>"; };
+		D0DB170D18EA592000F78AE6 /* GBGPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGPlayer.h; sourceTree = "<group>"; };
+		D0DB170E18EA592000F78AE6 /* GBGPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGPlayer.m; sourceTree = "<group>"; };
+		D0DB171118EA712400F78AE6 /* GBGRegiment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGRegiment.h; sourceTree = "<group>"; };
+		D0DB171218EA712400F78AE6 /* GBGRegiment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGRegiment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,7 @@
 		D03D4B3618D8FC42003F0196 /* gettysburg-recreation-2 */ = {
 			isa = PBXGroup;
 			children = (
+				D0DB171018EA592A00F78AE6 /* Models */,
 				D03D4B3F18D8FC42003F0196 /* GBGAppDelegate.h */,
 				D03D4B4018D8FC42003F0196 /* GBGAppDelegate.m */,
 				D03D4B6D18D97F08003F0196 /* Game View */,
@@ -176,6 +183,17 @@
 			children = (
 			);
 			name = graphics;
+			sourceTree = "<group>";
+		};
+		D0DB171018EA592A00F78AE6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0DB170D18EA592000F78AE6 /* GBGPlayer.h */,
+				D0DB170E18EA592000F78AE6 /* GBGPlayer.m */,
+				D0DB171118EA712400F78AE6 /* GBGRegiment.h */,
+				D0DB171218EA712400F78AE6 /* GBGRegiment.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,10 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0DB170F18EA592000F78AE6 /* GBGPlayer.m in Sources */,
 				D03D4B3D18D8FC42003F0196 /* main.m in Sources */,
 				D03D4B4118D8FC42003F0196 /* GBGAppDelegate.m in Sources */,
 				D03D4B6C18D97EE7003F0196 /* GBGMainViewController.m in Sources */,
 				D03D4B6218D8FE79003F0196 /* GBGStartMenuViewController.m in Sources */,
+				D0DB171318EA712400F78AE6 /* GBGRegiment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

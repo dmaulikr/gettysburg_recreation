@@ -7,14 +7,19 @@
 //
 
 #import "GBGPlayer.h"
+#import "GBGRegiment.h"
 
 @implementation GBGPlayer
 
--(id)initWithRank:(NSInteger)rank andSide:(NSInteger)side {
+-(id)initWithRank:(Rank)rank andSide:(Loyalty)side {
     self = [super init];
     
+    self.rank = rank;
+    self.loyalty = side;
+    /*
+    
     switch(rank) {
-        case 0: // Colenel
+        case 0:
             self.rank = Colonel;
             break;
         case 1:
@@ -36,7 +41,7 @@
             self.loyalty = theConfederacy;
             break;
     }
-    
+     */
     
     return self;
 }
