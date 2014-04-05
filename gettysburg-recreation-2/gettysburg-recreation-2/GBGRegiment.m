@@ -20,6 +20,7 @@
                 self.health         = 100;
                 self.moveSpeed      = 100;
                 self.combatStrength = 100;
+                NSLog(@"is an infantry!");
                 break;
                 
             case Cavalry:
@@ -27,6 +28,8 @@
                 self.health         = 100;
                 self.moveSpeed      = 100;
                 self.combatStrength = 100;
+                NSLog(@"is a cavalry!");
+
                 break;
                 
             case Artillery:
@@ -34,6 +37,8 @@
                 self.health         = 100;
                 self.moveSpeed      = 100;
                 self.combatStrength = 100;
+                NSLog(@"is an artillery!");
+
 
                 break;
         }

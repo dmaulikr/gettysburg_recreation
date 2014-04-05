@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GBGPlayer.h"
 
 @interface GBGRegiment : NSObject
 
@@ -15,6 +16,8 @@ typedef NS_ENUM(NSUInteger, RegimentType) {
     Cavalry = 1,
     Artillery  = 2
 };
+
+@property (nonatomic, weak) GBGPlayer *owner;
 
 @property (nonatomic) RegimentType regimentType;
 

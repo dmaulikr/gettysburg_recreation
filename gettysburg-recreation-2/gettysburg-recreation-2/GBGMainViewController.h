@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "GBGPlayer.h"
+#import "GBGHumanPlayer.h"
+
 
 @interface GBGMainViewController : UIViewController
 
