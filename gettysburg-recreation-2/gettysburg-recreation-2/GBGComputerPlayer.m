@@ -1,24 +1,19 @@
 //
-//  GBGHumanPlayer.m
+//  GBGComputerPlayer.m
 //  gettysburg-recreation-2
 //
 //  Created by Ellen Hui on 4/4/14.
 //  Copyright (c) 2014 Harvey Mudd. All rights reserved.
 //
 
-#import "GBGHumanPlayer.h"
+#import "GBGComputerPlayer.h"
 
-@interface GBGHumanPlayer ()
-//-(NSMutableArray*)setupHumanRegiments:(Rank)rank;
-@end
+@implementation GBGComputerPlayer
 
-@implementation GBGHumanPlayer
 
 -(NSMutableArray*)setupRegiments{
     NSMutableArray *regs = [[NSMutableArray alloc] init];
     
-    // FIXME: Later, when we know where to put regiments (ie. not in a line), should probably pass locations in.
-
     if (self.playerRank == Colonel) {
         GBGRegiment *tmpRegiment = [[GBGRegiment alloc]initWithRegimentType:Infantry andOrigin:CGPointMake(0, 0)];
         [regs addObject:tmpRegiment];
@@ -42,6 +37,5 @@
     
     return regs;
 }
-
 
 @end

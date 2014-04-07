@@ -15,9 +15,26 @@
 
 @implementation GBGPlayer
 
--(NSMutableArray*)setupRegiments:(Rank)rank {
+-(NSMutableArray*)setupRegiments {
     // Error!  This should ALWAYS be overridden.
     return NULL;
+}
+
+
+-(id)initWithPlayerRank:(Rank)rank andSide:(Loyalty)side {
+    self = [super init];
+    
+    self.playerRank = rank;
+    //self.rank = rank;
+    
+    self.loyalty = side;
+    
+    self.controlledRegiments = [self setupRegiments];
+    
+    NSLog(@"I am a %d", self.playerRank);
+    NSLog(@"and I have %d regiments", self.controlledRegiments.count);
+    
+    return self;
 }
 
 @end

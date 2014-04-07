@@ -28,12 +28,13 @@ typedef NS_ENUM(NSUInteger, Loyalty) {
 
 @property (nonatomic, strong) NSMutableArray *controlledRegiments;
 
--(NSMutableArray*)setupRegiments:(Rank)rank;
+-(NSMutableArray*)setupRegiments;
 
 //@property (nonatomic, strong) NSMutableArray *aiRegiments;
 
-// Custom initializer.
-// FIXME: Turn this into default initializer?  Overwrite init?
+// NOTE: This is implemented in subclasses.
 //-(id)initWithRank:(Rank)rank andSide:(Loyalty)side;
+-(id)initWithPlayerRank:(Rank)rank andSide:(Loyalty)side;
+
 
 @end

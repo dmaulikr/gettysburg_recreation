@@ -52,7 +52,7 @@
     NSLog(@"side: %i", _side);
     NSLog(@"rank: %i", _rank);
     
-    _player = [[GBGHumanPlayer alloc]initWithRank:_rank andSide:_side];
+    _player = [[GBGHumanPlayer alloc]initWithPlayerRank:_rank andSide:_side];
     
     // FIXME(DEBUG): are we creating a player?
     assert(_player);

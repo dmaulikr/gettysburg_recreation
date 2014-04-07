@@ -1,5 +1,5 @@
 //
-//  GBGHumanPlayer.h
+//  GBGComputerPlayer.h
 //  gettysburg-recreation-2
 //
 //  Created by Ellen Hui on 4/4/14.
@@ -9,10 +9,7 @@
 #import "GBGPlayer.h"
 #import "GBGRegiment.h"
 
-@interface GBGHumanPlayer : GBGPlayer
 
-
-//@property (nonatomic) Rank rank;
-
+@interface GBGComputerPlayer : GBGPlayer
 
 @end

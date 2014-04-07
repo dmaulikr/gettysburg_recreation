@@ -24,6 +24,7 @@
 		D0DB170F18EA592000F78AE6 /* GBGPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB170E18EA592000F78AE6 /* GBGPlayer.m */; };
 		D0DB171318EA712400F78AE6 /* GBGRegiment.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB171218EA712400F78AE6 /* GBGRegiment.m */; };
 		D0DB171618EF92A900F78AE6 /* GBGHumanPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB171518EF92A900F78AE6 /* GBGHumanPlayer.m */; };
+		D0DB171918EF9BCE00F78AE6 /* GBGComputerPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB171818EF9BCE00F78AE6 /* GBGComputerPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		D0DB171218EA712400F78AE6 /* GBGRegiment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGRegiment.m; sourceTree = "<group>"; };
 		D0DB171418EF92A900F78AE6 /* GBGHumanPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGHumanPlayer.h; sourceTree = "<group>"; };
 		D0DB171518EF92A900F78AE6 /* GBGHumanPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGHumanPlayer.m; sourceTree = "<group>"; };
+		D0DB171718EF9BCE00F78AE6 /* GBGComputerPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGComputerPlayer.h; sourceTree = "<group>"; };
+		D0DB171818EF9BCE00F78AE6 /* GBGComputerPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGComputerPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +198,8 @@
 				D0DB170E18EA592000F78AE6 /* GBGPlayer.m */,
 				D0DB171418EF92A900F78AE6 /* GBGHumanPlayer.h */,
 				D0DB171518EF92A900F78AE6 /* GBGHumanPlayer.m */,
+				D0DB171718EF9BCE00F78AE6 /* GBGComputerPlayer.h */,
+				D0DB171818EF9BCE00F78AE6 /* GBGComputerPlayer.m */,
 				D0DB171118EA712400F78AE6 /* GBGRegiment.h */,
 				D0DB171218EA712400F78AE6 /* GBGRegiment.m */,
 			);
@@ -299,6 +304,7 @@
 			files = (
 				D0DB170F18EA592000F78AE6 /* GBGPlayer.m in Sources */,
 				D0DB171618EF92A900F78AE6 /* GBGHumanPlayer.m in Sources */,
+				D0DB171918EF9BCE00F78AE6 /* GBGComputerPlayer.m in Sources */,
 				D03D4B3D18D8FC42003F0196 /* main.m in Sources */,
 				D03D4B4118D8FC42003F0196 /* GBGAppDelegate.m in Sources */,
 				D03D4B6C18D97EE7003F0196 /* GBGMainViewController.m in Sources */,
