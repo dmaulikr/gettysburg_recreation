@@ -10,7 +10,7 @@
 
 @implementation GBGRegiment
 
--(instancetype)initWithRegimentType:(RegimentType)type andOrigin:(CGPoint)origin {
+-(id)initWithRegimentType:(RegimentType)type andOrigin:(CGPoint)origin andSide:(Side)side {
     self = [super init];
     if (self) {
         // FIXME: Give these actual values instead of placeholder = 100.
@@ -20,7 +20,6 @@
                 self.health         = 100;
                 self.moveSpeed      = 100;
                 self.combatStrength = 100;
-                NSLog(@"is an infantry!");
                 break;
                 
             case Cavalry:
@@ -28,8 +27,6 @@
                 self.health         = 100;
                 self.moveSpeed      = 100;
                 self.combatStrength = 100;
-                NSLog(@"is a cavalry!");
-
                 break;
                 
             case Artillery:
@@ -37,53 +34,53 @@
                 self.health         = 100;
                 self.moveSpeed      = 100;
                 self.combatStrength = 100;
-                NSLog(@"is an artillery!");
-
-
                 break;
         }
     }
-    // FIXME
+    
+    // FIXME: currently, all regiments of of size 10 by 10.  They probably shouldn't be so arbitrary, or so square.
+    self.position = CGRectMake(origin.x, origin.y, 10, 10);
+    //CGRect aRect = { aPoint, aSize };
+    
+    self.side = side;
+    
+    NSLog(@"Made a %d regiment at position (%f, %f)", _side, _position.origin.x, _position.origin.y);
     return self;
 }
 
 
-// FIXME: Move method.  Should really be implemented in subclasses, but assume only one type of regiment for now.
 -(NSArray *)getPathTo:(CGPoint)destination withNumSteps:(CGFloat) steps {
-    //CGPoint center = CGPointMake()
     
     /*
-     * The starting position is indicated by the coordinates of the upper left corner and the size of the frame.
-     * Therefore, the center is the origin plus half the height/width.
+     * A subview's origin is its upper left corner, so this is some arithmetic to
+     * find the upper left corner of the destination view (since presumably the touch 
+     * won't occur at the upper left of the location the user wants).
      */
-                                 
-    //CGFloat srcX = _position.origin.x + _position.size.width / 2;   // X-coordinate of current position.
-    //CGFloat srcY = _position.origin.y + _position.size.height / 2;  // Y-coordinate of current position.
-    
     CGFloat destX = destination.x - _position.size.width / 2;   // X-coordinate of dest position.
     CGFloat destY = destination.y - _position.size.height / 2;  // Y-coordinate of dest position.
 
+    // Finding the x and y differences between points
     CGFloat deltaX = destX - _position.origin.x;
-    CGFloat deltaY = destY = _position.origin.y;
+    CGFloat deltaY = destY - _position.origin.y;
 
+    // Points for incrementing
     CGFloat newX = _position.origin.x;
     CGFloat newY = _position.origin.y;
-    NSValue *newPoint;
     
     NSMutableArray *pointsInPath = [[NSMutableArray alloc] init];
     
     for (CGFloat i = 0; i <= 1; i += 1 / steps) {
         newX += deltaX * i;
         newY += deltaY * i;
-        newPoint = [NSValue valueWithCGPoint:CGPointMake(newX, newY)];
-        
-        [pointsInPath addObject:newPoint];
+
+        // NSArrays can't hangle structs, to wrap the CGPoint in an NSValue
+        [pointsInPath addObject:[NSValue valueWithCGPoint:CGPointMake(newX, newY)]];
     }
     return pointsInPath;
 }
 
 -(void)attack:(GBGRegiment *)target {
-    // FIXME
+    // TODO: Implement this.  Eventually.
 }
 
 

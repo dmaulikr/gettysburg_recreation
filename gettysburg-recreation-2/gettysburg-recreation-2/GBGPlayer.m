@@ -7,7 +7,7 @@
 //
 
 #import "GBGPlayer.h"
-#import "GBGRegiment.h"
+//#import "GBGRegiment.h"
 
 @interface GBGPlayer ()
 @end
@@ -15,26 +15,25 @@
 
 @implementation GBGPlayer
 
--(NSMutableArray*)setupRegiments {
-    // Error!  This should ALWAYS be overridden.
-    return NULL;
-}
-
-
--(id)initWithPlayerRank:(Rank)rank andSide:(Loyalty)side {
+-(id)initWithRegimentsAtLocations:(NSArray *)locations andSide:(enum Side)side{
     self = [super init];
+
+    self.controlledRegiments = [[NSMutableArray alloc] init];
     
-    self.playerRank = rank;
-    //self.rank = rank;
+    // Some temporary variables, used in the for loop.
+    NSValue *loc;
+    CGPoint pointLoc;
     
-    self.loyalty = side;
-    
-    self.controlledRegiments = [self setupRegiments];
-    
-    NSLog(@"I am a %d", self.playerRank);
-    NSLog(@"and I have %d regiments", self.controlledRegiments.count);
-    
+    for (loc in locations) {
+        // Extract CGPoint from NSValue wrapper
+        pointLoc = [loc CGPointValue];
+        
+        // Create a new regiment at this location and add it to the list of controlled regiments.
+        // Currently, all regiments created are infantry type.
+        [self.controlledRegiments addObject:[[GBGRegiment alloc] initWithRegimentType:0 andOrigin:pointLoc andSide:side]];
+    }
     return self;
 }
+
 
 @end

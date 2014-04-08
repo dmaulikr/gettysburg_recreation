@@ -7,34 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GBGRegiment.h"
 
 @interface GBGPlayer : NSObject
 
-typedef NS_ENUM(NSUInteger, Rank) {
-    Colonel = 0,
-    BrigadierGeneral = 1,
-    MajorGeneral = 2,
-    General = 3
-};
-
-typedef NS_ENUM(NSUInteger, Loyalty) {
-    theUnion = 0,
-    theConfederacy = 1,
-};
-
-
-@property (nonatomic) Rank playerRank;
-@property (nonatomic) Loyalty loyalty;
-
+// This is an NSMutableArray of the regiments that this player controls.
 @property (nonatomic, strong) NSMutableArray *controlledRegiments;
 
--(NSMutableArray*)setupRegiments;
+/*
+ * Initializer for the player class. Takes in an NSArray of NSValues,
+ * where the NSValues are the locations of the regiments owned by this 
+ * player.  
+ * 
+ * NOTE: This can pretty easily be modified to take locations in another 
+ * format if necessary.
+ */
+-(id)initWithRegimentsAtLocations:(NSArray *)locations andSide:(enum Side)side;
 
-//@property (nonatomic, strong) NSMutableArray *aiRegiments;
-
-// NOTE: This is implemented in subclasses.
-//-(id)initWithRank:(Rank)rank andSide:(Loyalty)side;
--(id)initWithPlayerRank:(Rank)rank andSide:(Loyalty)side;
 
 
 @end
