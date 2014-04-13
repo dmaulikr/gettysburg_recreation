@@ -38,7 +38,7 @@
         }
     }
     
-    // FIXME: currently, all regiments of of size 10 by 10.  They probably shouldn't be so arbitrary, or so square.
+    // FIXME: currently, all regiments are of size 10 by 10.  They probably shouldn't be so arbitrary, or so square.
     self.position = CGRectMake(origin.x, origin.y, 10, 10);
     //CGRect aRect = { aPoint, aSize };
     
@@ -69,6 +69,7 @@
     
     NSMutableArray *pointsInPath = [[NSMutableArray alloc] init];
     
+    // Define each step of the movement
     for (CGFloat i = 0; i <= 1; i += 1 / steps) {
         newX += deltaX * i;
         newY += deltaY * i;
@@ -80,7 +81,7 @@
 }
 
 -(void)attack:(GBGRegiment *)target {
-    // TODO: Implement this.  Eventually.
+    // TODO: Implement this if there is time. Not high priority.
 }
 
 

@@ -46,7 +46,7 @@ typedef NS_ENUM(NSUInteger, Side) {
  */
 -(NSArray *)getPathTo:(CGPoint)destination withNumSteps:(CGFloat)steps;
 
-// TODO: Attack things.  Currently unimplemented.
+// TODO: Attack things.  Currently unimplemented and will only be implemented if there is time.
 -(void)attack:(GBGRegiment *)target;
 
 

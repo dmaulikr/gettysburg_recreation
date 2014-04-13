@@ -18,6 +18,9 @@
 @property (nonatomic) NSInteger rank;
 @property (nonatomic) NSInteger side;
 
+@property (nonatomic) NSArray *humanRegsLocations;
+@property (nonatomic) NSArray *computerRegsLocations;
+
 @property (nonatomic, strong) GBGPlayer *player;
 @property (nonatomic, strong) GBGPlayer *computer;
 

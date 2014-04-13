@@ -74,7 +74,6 @@
         _computer =[[GBGPlayer alloc] initWithRegimentsAtLocations:computerRegsLocations andSide:1];
     }
     
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,7 +82,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+// Make the regiments appear on the map (FIXME: this will need to be optimized
+// for large numbers of regiments)
+- (void) viewWillAppear:(BOOL)animated
+{
+    // Get the Union cavalry sprite from the file
+    UIImage *unionCavalrySprite = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Union_cavalry_Sprites" ofType:@"png"]];
+    
+    // Create a UIImageView corresponding to the sprite, center it,
+    // and add the new view as a subview of the map (FIXME MANY PROBLEMS)
+    UIImageView *unionCavalrySpriteView = [[UIImageView alloc] initWithImage:unionCavalrySprite];
+    
+    //CGPoint* xLocation = (__bridge CGPoint*)_humanRegsLocations[0];
+    //CGPoint* yLocation = (__bridge CGPoint*)_humanRegsLocations[0];
+    //CGFloat xLoc = xLocation->x;
+   // CGFloat yLoc = yLocation->y;
 
+    unionCavalrySpriteView.center = CGPointMake(100, 300);
+    [self.view addSubview:unionCavalrySpriteView];
+   
+}
 
 /*
 #pragma mark - Navigation

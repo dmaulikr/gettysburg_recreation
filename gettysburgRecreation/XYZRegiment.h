@@ -23,7 +23,7 @@
 // An array that holds the x and y location of the regiment, where
 // the integer portion is the specific tile and the decimal portion is
 // the location within the tile
-@property NSMutableArray *locationArray;
+@property NSMutableArray *locationrray;
 
 // The range of movement of a regiment, measured in number of tiles
 @property int moveRange;
