@@ -74,6 +74,26 @@
         _computer =[[GBGPlayer alloc] initWithRegimentsAtLocations:computerRegsLocations andSide:1];
     }
     
+    // Get the Union cavalry sprite from the file
+    UIImage *unionCavalrySprite = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Union_cavalry_Sprites" ofType:@"png"]];
+    
+    // Create a UIImageView corresponding to the sprite, center it,
+    // and add the new view as a subview of the map
+    UIImageView *unionCavalrySpriteView = [[UIImageView alloc] initWithImage:unionCavalrySprite];
+    
+    for (int i=0; i< humanRegsLocations.count;i++) {
+        
+        // Extract CGPoint from the NSValue wrapper
+        NSValue *humanRegValue = _humanRegsLocations[i];
+        CGPoint humanRegPoint = humanRegValue.CGPointValue;
+        
+        // Get the x and y coordinates from the location
+        CGFloat xLocation = humanRegPoint.x;
+        CGFloat yLocation = humanRegPoint.y;
+        NSLog(@"X: %f", xLocation); // The location says it's zero. FIXME: instatiation method.
+        unionCavalrySpriteView.center = CGPointMake(xLocation, yLocation);
+        [self.view addSubview:unionCavalrySpriteView];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,8 +104,9 @@
 
 // Make the regiments appear on the map (FIXME: this will need to be optimized
 // for large numbers of regiments)
-- (void) viewWillAppear:(BOOL)animated
+/**- (void) viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
     // Get the Union cavalry sprite from the file
     UIImage *unionCavalrySprite = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Union_cavalry_Sprites" ofType:@"png"]];
     
@@ -93,15 +114,27 @@
     // and add the new view as a subview of the map (FIXME MANY PROBLEMS)
     UIImageView *unionCavalrySpriteView = [[UIImageView alloc] initWithImage:unionCavalrySprite];
     
-    //CGPoint* xLocation = (__bridge CGPoint*)_humanRegsLocations[0];
-    //CGPoint* yLocation = (__bridge CGPoint*)_humanRegsLocations[0];
-    //CGFloat xLoc = xLocation->x;
-   // CGFloat yLoc = yLocation->y;
-
-    unionCavalrySpriteView.center = CGPointMake(100, 300);
-    [self.view addSubview:unionCavalrySpriteView];
-   
+    // Temporary values for the for loop
+    NSValue *humanRegValue; // The NSValue coming from the humanRegsLocations array
+    CGPoint humanRegPoint; // The CGPoint to which each NSValue will be converted
+    
+    for (humanRegValue in _humanRegsLocations) {
+        NSLog(@"THE LOG SCORE : %f", 2.0f);
+        // Extract CGPoint from the NSValue wrapper
+        humanRegPoint = [humanRegValue CGPointValue];
+        CGFloat xLocation = humanRegPoint.x;
+        CGFloat yLocation = humanRegPoint.y;
+        //NSLog(@"THE LOG SCORE : %f", xLocation);
+        unionCavalrySpriteView.center = CGPointMake(xLocation, yLocation);
+        [self.view addSubview:unionCavalrySpriteView];
+        
+        [super viewDidAppear:YES];
+    }
 }
+    
+*/
+    
+
 
 /*
 #pragma mark - Navigation
