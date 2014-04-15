@@ -8,6 +8,9 @@
 
 #import "GBGStartMenuViewController.h"
 #import "GBGMainViewController.h"
+#import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
+@import AVFoundation;
 
 
 @interface GBGStartMenuViewController ()
@@ -24,24 +27,57 @@
     return self;
 }
 
+- (UIColor*)resizeImage:(UIImage*)aImage reSize:(CGSize)newSize
+{
+    UIGraphicsBeginImageContextWithOptions(newSize, YES, [UIScreen mainScreen].scale);
+    [aImage drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    UIColor* wallpaper = [UIColor colorWithPatternImage:UIGraphicsGetImageFromCurrentImageContext()];
+    
+    UIGraphicsEndImageContext();
+    return wallpaper;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    /*
+    AVAudioPlayer *menuAudioPlayer;
+    
+    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"Menu_Audio.aiff", [[NSBundle mainBundle] resourcePath]]];
+    
+    NSError *error;
+    menuAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    menuAudioPlayer.numberOfLoops = -1;
+    
+    if (menuAudioPlayer == nil)
+        NSLog([error description]);
+    else
+        [menuAudioPlayer play];
+    */
+    // self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Menu_Background.png"]];
+    // UIColor *colorWithPatternImage = [UIColor whiteColor];
+    
+    UIImage *wallpaper = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Menu_Background" ofType:@"png"]];
+    
+    // static const CGSize wallpaperSize = {1536, 2048};
+    static const CGSize wallpaperSize = {768, 1024};
+    
+    self.view.backgroundColor = [self resizeImage:wallpaper reSize:wallpaperSize];
+    
     
     // Set up the data for rank/side.
     _ranks = @[@"Colonel", @"Brigadier General", @"Major General", @"General"];
     _sides = @[@"Union", @"Confederacy"];
     
     // Create rank/side selector.
-    _optionSelector = [[UIPickerView alloc] initWithFrame:CGRectMake(150, 300, 500, 500)];
+    _optionSelector = [[UIPickerView alloc] initWithFrame:CGRectMake(150, 500, 500, 500)];
     _optionSelector.delegate = self;
     _optionSelector.showsSelectionIndicator = YES;
     
     // Create start button.
     _startButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _startButton.frame = CGRectMake(100, 100, 600, 300);
+    _startButton.frame = CGRectMake(100, 200, 600, 300);
     _startButtonLabel = @"Choose a rank and side!";
     
     // Set up start button.
@@ -54,8 +90,8 @@
     [self.view addSubview:_optionSelector];
     
     [_startButton addTarget:self action:@selector(didPressButton:) forControlEvents:UIControlEventTouchUpInside];
-
-
+    
+    
     // FIXME: With this line, the button only changes label once both rank and side are selected.
     _startButton.enabled = NO;
     

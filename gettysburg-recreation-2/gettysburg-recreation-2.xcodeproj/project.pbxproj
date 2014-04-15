@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D03D4B3118D8FC42003F0196 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03D4B3018D8FC42003F0196 /* Foundation.framework */; };
+		D03D4B3118D8FC42003F0196 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03D4B3018D8FC42003F0196 /* Foundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		D03D4B3318D8FC42003F0196 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03D4B3218D8FC42003F0196 /* CoreGraphics.framework */; };
 		D03D4B3518D8FC42003F0196 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03D4B3418D8FC42003F0196 /* UIKit.framework */; };
 		D03D4B3B18D8FC42003F0196 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D03D4B3918D8FC42003F0196 /* InfoPlist.strings */; };
@@ -23,6 +23,10 @@
 		D03D4B6C18D97EE7003F0196 /* GBGMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03D4B6B18D97EE7003F0196 /* GBGMainViewController.m */; };
 		D0DB170F18EA592000F78AE6 /* GBGPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB170E18EA592000F78AE6 /* GBGPlayer.m */; };
 		D0DB171318EA712400F78AE6 /* GBGRegiment.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DB171218EA712400F78AE6 /* GBGRegiment.m */; };
+		DA1A41AE18FCD63F00B80D2F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1A41AD18FCD63F00B80D2F /* AVFoundation.framework */; };
+		DA23845118FCD32000F795B0 /* Confederate_Audio.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DA23844E18FCD32000F795B0 /* Confederate_Audio.aiff */; };
+		DA23845218FCD32000F795B0 /* Menu_Audio.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DA23844F18FCD32000F795B0 /* Menu_Audio.aiff */; };
+		DA23845318FCD32000F795B0 /* Union_Audio.aiff in Resources */ = {isa = PBXBuildFile; fileRef = DA23845018FCD32000F795B0 /* Union_Audio.aiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		D0DB170E18EA592000F78AE6 /* GBGPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGPlayer.m; sourceTree = "<group>"; };
 		D0DB171118EA712400F78AE6 /* GBGRegiment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGRegiment.h; sourceTree = "<group>"; };
 		D0DB171218EA712400F78AE6 /* GBGRegiment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGRegiment.m; sourceTree = "<group>"; };
+		DA1A41AD18FCD63F00B80D2F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DA23844E18FCD32000F795B0 /* Confederate_Audio.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Confederate_Audio.aiff; sourceTree = "<group>"; };
+		DA23844F18FCD32000F795B0 /* Menu_Audio.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Menu_Audio.aiff; sourceTree = "<group>"; };
+		DA23845018FCD32000F795B0 /* Union_Audio.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Union_Audio.aiff; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA1A41AE18FCD63F00B80D2F /* AVFoundation.framework in Frameworks */,
 				D03D4B3318D8FC42003F0196 /* CoreGraphics.framework in Frameworks */,
 				D03D4B3518D8FC42003F0196 /* UIKit.framework in Frameworks */,
 				D03D4B3118D8FC42003F0196 /* Foundation.framework in Frameworks */,
@@ -108,6 +117,7 @@
 		D03D4B2F18D8FC42003F0196 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA1A41AD18FCD63F00B80D2F /* AVFoundation.framework */,
 				D03D4B3018D8FC42003F0196 /* Foundation.framework */,
 				D03D4B3218D8FC42003F0196 /* CoreGraphics.framework */,
 				D03D4B3418D8FC42003F0196 /* UIKit.framework */,
@@ -125,6 +135,7 @@
 				D03D4B6D18D97F08003F0196 /* Game View */,
 				D03D4B6618D8FEF1003F0196 /* Start Menu */,
 				D03D4B4218D8FC42003F0196 /* Images.xcassets */,
+				DA1A41AF18FCDAC300B80D2F /* Audio.xcassets */,
 				D058449018E6135C007C2F6F /* graphics */,
 				D03D4B3718D8FC42003F0196 /* Supporting Files */,
 			);
@@ -194,6 +205,16 @@
 				D0DB171218EA712400F78AE6 /* GBGRegiment.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		DA1A41AF18FCDAC300B80D2F /* Audio.xcassets */ = {
+			isa = PBXGroup;
+			children = (
+				DA23845018FCD32000F795B0 /* Union_Audio.aiff */,
+				DA23844F18FCD32000F795B0 /* Menu_Audio.aiff */,
+				DA23844E18FCD32000F795B0 /* Confederate_Audio.aiff */,
+			);
+			name = Audio.xcassets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +294,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D03D4B3B18D8FC42003F0196 /* InfoPlist.strings in Resources */,
+				DA23845318FCD32000F795B0 /* Union_Audio.aiff in Resources */,
+				DA23845218FCD32000F795B0 /* Menu_Audio.aiff in Resources */,
 				D03D4B4318D8FC42003F0196 /* Images.xcassets in Resources */,
+				DA23845118FCD32000F795B0 /* Confederate_Audio.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +443,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gettysburg-recreation-2/gettysburg-recreation-2-Prefix.pch";
 				INFOPLIST_FILE = "gettysburg-recreation-2/gettysburg-recreation-2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -432,6 +457,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gettysburg-recreation-2/gettysburg-recreation-2-Prefix.pch";
 				INFOPLIST_FILE = "gettysburg-recreation-2/gettysburg-recreation-2-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
