@@ -81,11 +81,11 @@
     // and add the new view as a subview of the map
     UIImageView *unionCavalrySpriteView = [[UIImageView alloc] initWithImage:unionCavalrySprite];
     
-    for (int i=0; i< humanRegsLocations.count;i++) {
+    for (int i=0; i< humanRegsLocations.count; i++) {
         
         // Extract CGPoint from the NSValue wrapper
         NSValue *humanRegValue = _humanRegsLocations[i];
-        CGPoint humanRegPoint = humanRegValue.CGPointValue;
+        CGPoint humanRegPoint = [humanRegValue CGPointValue];
         
         // Get the x and y coordinates from the location
         CGFloat xLocation = humanRegPoint.x;
