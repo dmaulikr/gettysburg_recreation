@@ -39,7 +39,7 @@
     }
     
     // FIXME: currently, all regiments are of size 10 by 10.  They probably shouldn't be so arbitrary, or so square.
-    self.position = CGRectMake(origin.x, origin.y, 10, 10);
+    //self.position = CGRectMake(origin.x, origin.y, 10, 10);
     //CGRect aRect = { aPoint, aSize };
     
     self.side = side;
