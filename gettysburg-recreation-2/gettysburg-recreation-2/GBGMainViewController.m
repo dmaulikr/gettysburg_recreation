@@ -64,7 +64,8 @@
     NSMutableArray *computerRegsLocations = [[NSMutableArray alloc] initWithObjects:[NSValue valueWithCGPoint:CGPointMake(100,300)], nil];
     
     _player = [[GBGPlayer alloc] initWithRegimentsAtLocations:humanRegsLocations andSide:_side];
-
+    NSLog(@"%@", @"Testing1");
+    NSLog(@"%@", humanRegsLocations[0]);
     // FIXME: Eventually, there's going to have to be either two computer controllers (since currently
     // the GBGPlayer's side must match all of its regiments' sides), or the array is going to have to
     // pass in more information so that we can have GBGPlayers with regiments from both sides.
@@ -84,19 +85,23 @@
     // and add the new view as a subview of the map
     UIImageView *unionCavalrySpriteView = [[UIImageView alloc] initWithImage:unionCavalrySprite];
     
-    for (int i=0; i < humanRegsLocations.count; i++) {
+    for (int i = 0; i < humanRegsLocations.count; i++) {
         
         // Extract CGPoint from the NSValue wrapper
-        NSValue *humanRegValue = [_humanRegsLocations objectAtIndex:i];
-        CGPoint humanRegPoint = [humanRegValue CGPointValue];
+        NSValue *humanRegValue = [_humanRegsLocations objectAtIndex:0];
+        CGPoint humanRegPoint = [humanRegValue CGPointValue]; // FIXME: the issue is here
         
+        NSLog(@"%@", @"Testing");
+        NSLog(@"%@", humanRegPoint);
+        //NSLog(@"%@", NSStringFromCGPoint(humanRegPoint));
         // Get the x and y coordinates from the location
         CGFloat xLocation = humanRegPoint.x;
         CGFloat yLocation = humanRegPoint.y;
         
-        NSLog(@"%@", NSStringFromCGPoint(humanRegPoint));
+        
         unionCavalrySpriteView.center = CGPointMake(15, 15);//FIXME: may not want centered
         [self.view addSubview:unionCavalrySpriteView];
+        
         
         
     }
@@ -123,6 +128,13 @@
     return touchedView;
  
 }*/
+/* Maybe use this for tapping?
+ //Getting mouse coordinates
+ NSMutableArray *vertices = [[NSMutableArray alloc] init];
+ CGPoint location = [self convertPoint:event.locationInWindow fromView:self];
+ NSValue *locationValue = [NSValue valueWithPoint:location];
+ [vertices addObject:locationValue];
+ */
  /*
 #pragma mark - Navigation
 

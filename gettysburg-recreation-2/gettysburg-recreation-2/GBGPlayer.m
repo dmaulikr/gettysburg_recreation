@@ -27,8 +27,8 @@
     
     for (loc in locations) {
         // Extract CGPoint from NSValue wrapper
-        pointLoc = [loc CGPointValue];
-        
+        pointLoc = [loc CGPointValue]; //FIXME: this is also having issues
+
         // Create a new regiment at this location and add it to the list of controlled regiments.
         // Currently, all regiments created are infantry type.
         [self.controlledRegiments addObject:[[GBGRegiment alloc] initWithRegimentType:0 andOrigin:pointLoc andSide:side]];
