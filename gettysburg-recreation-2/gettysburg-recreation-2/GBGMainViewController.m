@@ -75,6 +75,8 @@
         _computer =[[GBGPlayer alloc] initWithRegimentsAtLocations:computerRegsLocations andSide:1];
     }
     
+    NSLog(@"%@", @"says CGPoint is at {0,0}; intitializer not working");
+    
     // Get the Union cavalry sprite from the file
     UIImage *unionCavalrySprite = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Union_cavalry_Sprites" ofType:@"png"]];
     
@@ -93,8 +95,10 @@
         CGFloat yLocation = humanRegPoint.y;
         
         NSLog(@"%@", NSStringFromCGPoint(humanRegPoint));
-        unionCavalrySpriteView.center = CGPointMake(xLocation, yLocation);//FIXME: may not want centered
+        unionCavalrySpriteView.center = CGPointMake(15, 15);//FIXME: may not want centered
         [self.view addSubview:unionCavalrySpriteView];
+        
+        
     }
 }
 
@@ -104,9 +108,22 @@
     // Dispose of any resources that can be recreated.
 }
     
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    //UITouch *myTouch = [[touches allObjects] objectAtIndex: 0];
+    UITouch *touch = [touches anyObject];
+    CGPoint currentPos = [touch locationInView: self.view];
+    NSLog(@"Point in myView: (%f,%f)", currentPos.x, currentPos.y);
+}
 
-
-/*
+/*- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    UIView *touchedView = [super hitTest:point withEvent:event];
+    NSSet* touches = [event allTouches];
+    // handle touches if you need
+    return touchedView;
+ 
+}*/
+ /*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
