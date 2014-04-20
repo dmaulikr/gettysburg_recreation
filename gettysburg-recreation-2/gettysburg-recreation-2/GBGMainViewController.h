@@ -24,6 +24,6 @@
 @property (nonatomic, strong) GBGPlayer *player;
 @property (nonatomic, strong) GBGPlayer *computer;
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;//FIXME: need this?
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event; //FIXME
+//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;//FIXME: need this?
+//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event; //FIXME
 @end

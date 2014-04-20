@@ -44,7 +44,7 @@
     
     self.side = side;
     
-    NSLog(@"Made a %d regiment at position (%f, %f)", _side, _position.origin.x, _position.origin.y);
+    //NSLog(@"Made a %d regiment at position (%f, %f)", _side, _position.origin.x, _position.origin.y);
     return self;
 }
 

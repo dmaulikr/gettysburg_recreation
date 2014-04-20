@@ -107,29 +107,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-    
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    //UITouch *myTouch = [[touches allObjects] objectAtIndex: 0];
-    UITouch *touch = [touches anyObject];
-    CGPoint currentPos = [touch locationInView: self.view];
-    NSLog(@"Point in myView: (%f,%f)", currentPos.x, currentPos.y);
-}
 
-/*- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    UIView *touchedView = [super hitTest:point withEvent:event];
-    NSSet* touches = [event allTouches];
-    // handle touches if you need
-    return touchedView;
- 
-}*/
-/* Maybe use this for tapping?
- //Getting mouse coordinates
- NSMutableArray *vertices = [[NSMutableArray alloc] init];
- CGPoint location = [self convertPoint:event.locationInWindow fromView:self];
- NSValue *locationValue = [NSValue valueWithPoint:location];
- [vertices addObject:locationValue];
- */
+
  /*
 #pragma mark - Navigation
 
