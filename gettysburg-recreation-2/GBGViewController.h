@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GBGPlayer.h"
 
 @interface GBGViewController : UIView
+
+@property (nonatomic) NSInteger rank;
+@property (nonatomic) NSInteger side;
+
+@property (nonatomic, strong) GBGPlayer *player;
+@property (nonatomic, strong) GBGPlayer *computer;
 
 @end

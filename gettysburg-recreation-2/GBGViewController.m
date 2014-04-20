@@ -11,12 +11,24 @@
 @implementation GBGViewController
 float oldX, oldY;
 bool dragging;
+//NSValue lastPoint[] = [[NSValue alloc]init];
+CGPoint touchOffset;
 
+
+/*- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    lastPoint[0] = [[touches anyObject] locationInView:self];
+    lastPoint[1] = lastPoint[0];
+    touchOffset.x = lastPoint[0].x - self.unionCavalrySprite0.position.x;
+    
+    
+}
+ */
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [[event allTouches] anyObject];
     CGPoint touchLocation = [touch locationInView:touch.view];
-    if ([[touch.view class] isSubclassOfClass:[UIView class]]) {
+    if ([[touch.view class] isKindOfClass:[UIImageView class]]) {
         dragging = YES;
         oldX = touchLocation.x;
         oldY = touchLocation.y;
@@ -32,7 +44,7 @@ bool dragging;
 {
     UITouch *touch = [[event allTouches] anyObject];
     CGPoint touchLocation = [touch locationInView:touch.view];
-    if ([[touch.view class] isSubclassOfClass:[UIView class]]) {
+    if ([[touch.view class] isSubclassOfClass:[UIImageView class]]) {
         UIView *theView = (UIView *)touch.view;
         if (dragging) {
             CGRect frame = theView.frame;

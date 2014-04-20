@@ -45,7 +45,7 @@
     [_scrollView addSubview:_map];
     
     // Tell scrollView how big the map is, so it can scroll.
-    _scrollView.contentSize = bigRect.size;
+    //_scrollView.contentSize = bigRect.size;
 
     // FIXME(DEBUG): are we passing values from the start menu?
     NSLog(@"side: %i", _side);
@@ -100,6 +100,7 @@
     CGPoint humanRegPoint1 = [[humanRegsLocations objectAtIndex:1] CGPointValue];
     unionCavalrySpriteView1.center = CGPointMake(humanRegPoint1.x, humanRegPoint1.y);
     [self.view addSubview:unionCavalrySpriteView1];
+    
 }
 
 - (void)didReceiveMemoryWarning
