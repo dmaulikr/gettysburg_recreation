@@ -54,18 +54,20 @@
     
     // Creating the regiments and handing them to the player and to the computer.
     
-    // FIXME: Currently, regardless of what rank is passed in, will create a human
-    // player with one regiment and a computer player with one regiment.
+    // Initialize the computer and human regiment locations. For now, these locations
+    // are hard-coded.
+    CGPoint humanLocationsArray[2] = {{300, 300}, {600, 600}};
+    CGPoint computerLocationsArray[2] = {{800, 800}, {1000, 1000}};
     
-    // The initializers take an array of regiment locations.  Currently, these location
-    // arrays are a total hack.  Real locations TBD.
-    //static CGPoint locationss[2] = {{180, 180}, {300, 400}};
-    NSMutableArray *humanRegsLocations = [[NSMutableArray alloc] initWithObjects:[NSValue valueWithCGPoint:CGPointMake(100,100)], nil];
-    NSMutableArray *computerRegsLocations = [[NSMutableArray alloc] initWithObjects:[NSValue valueWithCGPoint:CGPointMake(100,300)], nil];
+    NSMutableArray *humanRegsLocations = [[NSMutableArray alloc] initWithObjects:
+                                          [NSValue valueWithCGPoint:CGPointMake(humanLocationsArray[0].x,humanLocationsArray[0].y)],
+                                          [NSValue valueWithCGPoint:CGPointMake(humanLocationsArray[1].x, humanLocationsArray[1].y)], nil];
+    NSMutableArray *computerRegsLocations = [[NSMutableArray alloc] initWithObjects:
+                                             [NSValue valueWithCGPoint:CGPointMake(computerLocationsArray[0].x, computerLocationsArray[0].y)],
+                                             [NSValue valueWithCGPoint:CGPointMake(computerLocationsArray[1].x, computerLocationsArray[1].y)], nil];
     
     _player = [[GBGPlayer alloc] initWithRegimentsAtLocations:humanRegsLocations andSide:_side];
-    NSLog(@"%@", @"Testing1");
-    NSLog(@"%@", humanRegsLocations[0]);
+    assert(_player);
     // FIXME: Eventually, there's going to have to be either two computer controllers (since currently
     // the GBGPlayer's side must match all of its regiments' sides), or the array is going to have to
     // pass in more information so that we can have GBGPlayers with regiments from both sides.
@@ -76,35 +78,28 @@
         _computer =[[GBGPlayer alloc] initWithRegimentsAtLocations:computerRegsLocations andSide:1];
     }
     
-    NSLog(@"%@", @"says CGPoint is at {0,0}; intitializer not working");
+    // This is hard-coded because views overwrite each other in for-loops. For the first
+    // iteration of this project, we want basic functionality for testing. We will optimize
+    // if there is time.
     
-    // Get the Union cavalry sprite from the file
-    UIImage *unionCavalrySprite = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Union_cavalry_Sprites" ofType:@"png"]];
+    // Get the Union cavalry sprite from the file, and save one copy of it for each regiment
+    UIImage *unionCavalrySprite0 = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Union_cavalry_Sprites" ofType:@"png"]];
+     UIImage *unionCavalrySprite1 = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Union_cavalry_Sprites" ofType:@"png"]];
     
-    // Create a UIImageView corresponding to the sprite, center it,
-    // and add the new view as a subview of the map
-    UIImageView *unionCavalrySpriteView = [[UIImageView alloc] initWithImage:unionCavalrySprite];
+    // Make a UIImageView with each sprite
+    UIImageView *unionCavalrySpriteView0 = [[UIImageView alloc] initWithImage:unionCavalrySprite0];
+    UIImageView *unionCavalrySpriteView1 = [[UIImageView alloc] initWithImage:unionCavalrySprite1];
     
-    for (int i = 0; i < humanRegsLocations.count; i++) {
-        
-        // Extract CGPoint from the NSValue wrapper
-        NSValue *humanRegValue = [_humanRegsLocations objectAtIndex:0];
-        CGPoint humanRegPoint = [humanRegValue CGPointValue]; // FIXME: the issue is here
-        
-        NSLog(@"%@", @"Testing");
-        NSLog(@"%@", humanRegPoint);
-        //NSLog(@"%@", NSStringFromCGPoint(humanRegPoint));
-        // Get the x and y coordinates from the location
-        CGFloat xLocation = humanRegPoint.x;
-        CGFloat yLocation = humanRegPoint.y;
-        
-        
-        unionCavalrySpriteView.center = CGPointMake(15, 15);//FIXME: may not want centered
-        [self.view addSubview:unionCavalrySpriteView];
-        
-        
-        
-    }
+    
+    // Obtain the first regiment's location and add a sprite there
+    CGPoint humanRegPoint0 = [[humanRegsLocations objectAtIndex:0] CGPointValue];
+    unionCavalrySpriteView0.center = CGPointMake(humanRegPoint0.x, humanRegPoint0.y);
+    [self.view addSubview:unionCavalrySpriteView0];
+    
+    // Obtain the second regiment's location and add a sprite there
+    CGPoint humanRegPoint1 = [[humanRegsLocations objectAtIndex:1] CGPointValue];
+    unionCavalrySpriteView1.center = CGPointMake(humanRegPoint1.x, humanRegPoint1.y);
+    [self.view addSubview:unionCavalrySpriteView1];
 }
 
 - (void)didReceiveMemoryWarning

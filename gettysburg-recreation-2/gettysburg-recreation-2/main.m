@@ -1,4 +1,4 @@
-//
+// Obtain the first regiment's location and add a sprite there//
 //  main.m
 //  gettysburg-recreation-2
 //
