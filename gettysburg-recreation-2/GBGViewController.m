@@ -9,26 +9,18 @@
 #import "GBGViewController.h"
 
 @implementation GBGViewController
+
 float oldX, oldY;
 bool dragging;
-//NSValue lastPoint[] = [[NSValue alloc]init];
-CGPoint touchOffset;
 
-
-/*- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    lastPoint[0] = [[touches anyObject] locationInView:self];
-    lastPoint[1] = lastPoint[0];
-    touchOffset.x = lastPoint[0].x - self.unionCavalrySprite0.position.x;
-    
-    
-}
- */
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    UITouch *touch = [[event allTouches] anyObject];
-    CGPoint touchLocation = [touch locationInView:touch.view];
-    if ([[touch.view class] isKindOfClass:[UIImageView class]]) {
+    //self.userInteractionEnabled = YES; FIXME: need this?
+    
+    UITouch *touch = [touches anyObject];
+    CGPoint touchLocation = [touch locationInView: touch.view];
+    if ([[touch.view class] isSubclassOfClass:[UIImageView class]]) {
+         NSLog(@"%@", @"TOUCHED!");
         dragging = YES;
         oldX = touchLocation.x;
         oldY = touchLocation.y;
@@ -55,4 +47,11 @@ CGPoint touchOffset;
     }
 }
 
+/*
+-(id)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    id hitView = [super hitTest:point withEvent:event];
+    if (hitView == self) return nil;
+    else return hitView;
+}
+*/
 @end
