@@ -136,7 +136,6 @@
 				D03D4B3F18D8FC42003F0196 /* GBGAppDelegate.h */,
 				D03D4B4018D8FC42003F0196 /* GBGAppDelegate.m */,
 				D03D4B6D18D97F08003F0196 /* Game View */,
-				D03D4B6618D8FEF1003F0196 /* Start Menu */,
 				D03D4B4218D8FC42003F0196 /* Images.xcassets */,
 				DA1A41AF18FCDAC300B80D2F /* Audio.xcassets */,
 				D058449018E6135C007C2F6F /* graphics */,
@@ -190,6 +189,7 @@
 				4099DEE619046567000C8AB7 /* GBGViewController.m */,
 				D03D4B6A18D97EE7003F0196 /* GBGMainViewController.h */,
 				D03D4B6B18D97EE7003F0196 /* GBGMainViewController.m */,
+				D03D4B6618D8FEF1003F0196 /* Start Menu */,
 			);
 			name = "Game View";
 			sourceTree = "<group>";

@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+       
     // Set up the bounds for the map and the smaller scroller view.
     CGRect screenRect =[[UIScreen mainScreen] bounds];
     CGRect bigRect = screenRect;
@@ -56,8 +56,8 @@
     
     // Initialize the computer and human regiment locations. For now, these locations
     // are hard-coded.
-    CGPoint humanLocationsArray[2] = {{300, 300}, {600, 600}};
-    CGPoint computerLocationsArray[2] = {{800, 800}, {1000, 1000}};
+    CGPoint humanLocationsArray[2] = {{225, 300}, {225, 500}};
+    CGPoint computerLocationsArray[2] = {{600, 275}, {600, 475}};
     
     NSMutableArray *humanRegsLocations = [[NSMutableArray alloc] initWithObjects:
                                           [NSValue valueWithCGPoint:CGPointMake(humanLocationsArray[0].x,humanLocationsArray[0].y)],
@@ -82,25 +82,62 @@
     // iteration of this project, we want basic functionality for testing. We will optimize
     // if there is time.
     
-    // Get the Union cavalry sprite from the file, and save one copy of it for each regiment
-    UIImage *unionCavalrySprite0 = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Union_cavalry_Sprites" ofType:@"png"]];
-     UIImage *unionCavalrySprite1 = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Union_cavalry_Sprites" ofType:@"png"]];
+    // Put the Union Infantry soldiers on the map
     
-    // Make a UIImageView with each sprite
-    UIImageView *unionCavalrySpriteView0 = [[UIImageView alloc] initWithImage:unionCavalrySprite0];
-    UIImageView *unionCavalrySpriteView1 = [[UIImageView alloc] initWithImage:unionCavalrySprite1];
+    // Get the sprite from the file
+    UIImage *unionInfantrySprite = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Union_Soldier_Marching_Sprites" ofType:@"png"]];
     
+    // Create a UIImageView for each sprite
+    UIImageView *unionInfantrySpriteView0 = [[UIImageView alloc] initWithImage:unionInfantrySprite];
+    UIImageView *unionInfantrySpriteView1 = [[UIImageView alloc] initWithImage:unionInfantrySprite];
     
-    // Obtain the first regiment's location and add a sprite there
+    // Rotate the sprite views 90 degrees
+    unionInfantrySpriteView0.transform = CGAffineTransformMakeRotation(3.14/2);
+    unionInfantrySpriteView1.transform = CGAffineTransformMakeRotation(3.14/2);
+    
+    // Obtain the first Union regiment's location and add a sprite there
     CGPoint humanRegPoint0 = [[humanRegsLocations objectAtIndex:0] CGPointValue];
-    unionCavalrySpriteView0.center = CGPointMake(humanRegPoint0.x, humanRegPoint0.y);
-    [self.view addSubview:unionCavalrySpriteView0];
+    unionInfantrySpriteView0.center = CGPointMake(humanRegPoint0.x, humanRegPoint0.y);
+    [self.view addSubview:unionInfantrySpriteView0];
+    unionInfantrySpriteView0.userInteractionEnabled = YES;
     
-    // Obtain the second regiment's location and add a sprite there
+    // Obtain the second Union regiment's location and add a sprite there
     CGPoint humanRegPoint1 = [[humanRegsLocations objectAtIndex:1] CGPointValue];
-    unionCavalrySpriteView1.center = CGPointMake(humanRegPoint1.x, humanRegPoint1.y);
-    [self.view addSubview:unionCavalrySpriteView1];
+    unionInfantrySpriteView1.center = CGPointMake(humanRegPoint1.x, humanRegPoint1.y);
+    [self.view addSubview:unionInfantrySpriteView1];
     
+    
+    // Put the Confederate Infantry soldiers on the map
+    
+    // Get the sprite from the file
+    UIImage *confederateInfantrySprite = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Confederate_Soldier_Marching_Sprites" ofType:@"png"]];
+    
+    // Create a UIImageView for each sprite
+    UIImageView *confederateInfantrySpriteView0 = [[UIImageView alloc] initWithImage:confederateInfantrySprite];
+    UIImageView *confederateInfantrySpriteView1 = [[UIImageView alloc] initWithImage:confederateInfantrySprite];
+
+    // Rotate each the sprite views 90 degrees
+    confederateInfantrySpriteView0.transform = CGAffineTransformMakeRotation(-3.14/2);
+    confederateInfantrySpriteView1.transform = CGAffineTransformMakeRotation(-3.14/2);
+    
+    // Obtain the first Confederate regiment's location and add a sprite there
+    CGPoint computerRegPoint0 = [[computerRegsLocations objectAtIndex:0] CGPointValue];
+    confederateInfantrySpriteView0.center = CGPointMake(computerRegPoint0.x, computerRegPoint0.y);
+    [self.view addSubview:confederateInfantrySpriteView0];
+    
+    // Obtain the second Confederate regiment's location and add a sprite there
+    CGPoint computerRegPoint1 = [[computerRegsLocations objectAtIndex:1] CGPointValue];
+    confederateInfantrySpriteView1.center = CGPointMake(computerRegPoint1.x, computerRegPoint1.y);
+    [self.view addSubview:confederateInfantrySpriteView1];
+    
+    
+    /*_map.userInteractionEnabled = TRUE;
+    unionInfantrySpriteView0.userInteractionEnabled = TRUE;
+    unionInfantrySpriteView1.userInteractionEnabled = TRUE;
+    confederateInfantrySpriteView0.userInteractionEnabled = TRUE;
+    confederateInfantrySpriteView1.userInteractionEnabled = TRUE;
+    */
+
 }
 
 - (void)didReceiveMemoryWarning
