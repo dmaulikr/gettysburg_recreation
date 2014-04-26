@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4099DEE719046567000C8AB7 /* GBGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4099DEE619046567000C8AB7 /* GBGViewController.m */; };
+		401B7843190B4FBB006632BD /* GBGImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 401B7842190B4FBB006632BD /* GBGImageView.m */; };
 		D03D4B3118D8FC42003F0196 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03D4B3018D8FC42003F0196 /* Foundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		D03D4B3318D8FC42003F0196 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03D4B3218D8FC42003F0196 /* CoreGraphics.framework */; };
 		D03D4B3518D8FC42003F0196 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03D4B3418D8FC42003F0196 /* UIKit.framework */; };
@@ -41,8 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4099DEE519046567000C8AB7 /* GBGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GBGViewController.h; path = ../GBGViewController.h; sourceTree = "<group>"; };
-		4099DEE619046567000C8AB7 /* GBGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GBGViewController.m; path = ../GBGViewController.m; sourceTree = "<group>"; };
+		401B7841190B4FBB006632BD /* GBGImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGImageView.h; sourceTree = "<group>"; };
+		401B7842190B4FBB006632BD /* GBGImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGImageView.m; sourceTree = "<group>"; };
 		D03D4B2D18D8FC42003F0196 /* gettysburg-recreation-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gettysburg-recreation-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03D4B3018D8FC42003F0196 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D03D4B3218D8FC42003F0196 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -185,8 +185,8 @@
 		D03D4B6D18D97F08003F0196 /* Game View */ = {
 			isa = PBXGroup;
 			children = (
-				4099DEE519046567000C8AB7 /* GBGViewController.h */,
-				4099DEE619046567000C8AB7 /* GBGViewController.m */,
+				401B7841190B4FBB006632BD /* GBGImageView.h */,
+				401B7842190B4FBB006632BD /* GBGImageView.m */,
 				D03D4B6A18D97EE7003F0196 /* GBGMainViewController.h */,
 				D03D4B6B18D97EE7003F0196 /* GBGMainViewController.m */,
 				D03D4B6618D8FEF1003F0196 /* Start Menu */,
@@ -327,7 +327,7 @@
 				D03D4B6C18D97EE7003F0196 /* GBGMainViewController.m in Sources */,
 				D03D4B6218D8FE79003F0196 /* GBGStartMenuViewController.m in Sources */,
 				D0DB171318EA712400F78AE6 /* GBGRegiment.m in Sources */,
-				4099DEE719046567000C8AB7 /* GBGViewController.m in Sources */,
+				401B7843190B4FBB006632BD /* GBGImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "GBGMainViewController.h"
+#import "GBGImageView.h"
 
 @interface GBGMainViewController ()
 
@@ -87,9 +88,9 @@
     // Get the sprite from the file
     UIImage *unionInfantrySprite = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Union_Soldier_Marching_Sprites" ofType:@"png"]];
     
-    // Create a UIImageView for each sprite
-    UIImageView *unionInfantrySpriteView0 = [[UIImageView alloc] initWithImage:unionInfantrySprite];
-    UIImageView *unionInfantrySpriteView1 = [[UIImageView alloc] initWithImage:unionInfantrySprite];
+    // Create a UIImageView for each sprite FIXME: wording
+    GBGImageView *unionInfantrySpriteView0 = [[GBGImageView alloc] initWithImage:unionInfantrySprite];
+    GBGImageView *unionInfantrySpriteView1 = [[GBGImageView alloc] initWithImage:unionInfantrySprite];
     
     // Rotate the sprite views 90 degrees
     unionInfantrySpriteView0.transform = CGAffineTransformMakeRotation(3.14/2);
@@ -113,8 +114,8 @@
     UIImage *confederateInfantrySprite = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Confederate_Soldier_Marching_Sprites" ofType:@"png"]];
     
     // Create a UIImageView for each sprite
-    UIImageView *confederateInfantrySpriteView0 = [[UIImageView alloc] initWithImage:confederateInfantrySprite];
-    UIImageView *confederateInfantrySpriteView1 = [[UIImageView alloc] initWithImage:confederateInfantrySprite];
+    GBGImageView *confederateInfantrySpriteView0 = [[GBGImageView alloc] initWithImage:confederateInfantrySprite];
+    GBGImageView *confederateInfantrySpriteView1 = [[GBGImageView alloc] initWithImage:confederateInfantrySprite];
 
     // Rotate each the sprite views 90 degrees
     confederateInfantrySpriteView0.transform = CGAffineTransformMakeRotation(-3.14/2);

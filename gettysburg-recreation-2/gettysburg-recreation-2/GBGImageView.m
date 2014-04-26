@@ -1,16 +1,17 @@
 //
-//  GBGViewController.m
+//  GBGImageView.m
 //  gettysburg-recreation-2
 //
-//  Created by elmira on 4/20/14.
+//  Created by elmira on 4/25/14.
 //  Copyright (c) 2014 Harvey Mudd. All rights reserved.
 //
 
-#import "GBGViewController.h"
+#import "GBGImageView.h"
 
-@implementation GBGViewController
+@implementation GBGImageView
 
-// Instance variables used in the touchesBegan: withEvent: method 
+
+// Instance variables used in the touchesBegan: withEvent: method
 float oldX, oldY;
 bool dragging;
 
@@ -20,8 +21,9 @@ bool dragging;
     
     UITouch *touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInView: touch.view];
+    NSLog(@"%@", @"TOUCHED!");
     if ([[touch.view class] isSubclassOfClass:[UIImageView class]]) {
-         NSLog(@"%@", @"TOUCHED!");
+        
         dragging = YES;
         oldX = touchLocation.x;
         oldY = touchLocation.y;
@@ -48,39 +50,45 @@ bool dragging;
     }
 }
 
+- (id) initWithImage:(UIImage *)image {
+   self = [super initWithImage:image];
+    return self;
+}
 /*- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
-{
-    CGFloat radius = 100.0;
-    CGRect frame = CGRectMake(0, 0,
-                              self.frame.size.width + radius,
-                              self.frame.size.height + radius);
-    
-    if (CGRectContainsPoint(frame, point)) {
-        return YES;
-    }
-    
-    return [super pointInside:point withEvent:event];
-}
-
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
-{
-    CGFloat radius = 100.0;
-    CGRect frame = CGRectMake(0, 0,
-                              self.frame.size.width + radius,
-                              self.frame.size.height + radius);
-    
-    if (CGRectContainsPoint(frame, point)) {
-        return self;
-    }
-    return [super hitTest:point withEvent:event];
-            
-}
+ {
+ CGFloat radius = 100.0;
+ CGRect frame = CGRectMake(0, 0,
+ self.frame.size.width + radius,
+ self.frame.size.height + radius);
+ 
+ if (CGRectContainsPoint(frame, point)) {
+ return YES;
+ }
+ 
+ return [super pointInside:point withEvent:event];
+ }
+ 
+ - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
+ {
+ CGFloat radius = 100.0;
+ CGRect frame = CGRectMake(0, 0,
+ self.frame.size.width + radius,
+ self.frame.size.height + radius);
+ 
+ if (CGRectContainsPoint(frame, point)) {
+ return self;
+ }
+ return [super hitTest:point withEvent:event];
+ 
+ }
  */
 /*
--(id)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    id hitView = [super hitTest:point withEvent:event];
-    if (hitView == self) return nil;
-    else return hitView;
-}
-*/
+ -(id)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+ id hitView = [super hitTest:point withEvent:event];
+ if (hitView == self) return nil;
+ else return hitView;
+ }
+ */
+
+
 @end
