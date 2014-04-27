@@ -88,7 +88,7 @@
     // Get the sprite from the file
     UIImage *unionInfantrySprite = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Union_Soldier_Marching_Sprites" ofType:@"png"]];
     
-    // Create a UIImageView for each sprite FIXME: wording
+    // Create a GBGImageView for each sprite FIXME: wording
     GBGImageView *unionInfantrySpriteView0 = [[GBGImageView alloc] initWithImage:unionInfantrySprite];
     GBGImageView *unionInfantrySpriteView1 = [[GBGImageView alloc] initWithImage:unionInfantrySprite];
     
@@ -113,7 +113,7 @@
     // Get the sprite from the file
     UIImage *confederateInfantrySprite = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Confederate_Soldier_Marching_Sprites" ofType:@"png"]];
     
-    // Create a UIImageView for each sprite
+    // Create a GBGImageView for each sprite
     GBGImageView *confederateInfantrySpriteView0 = [[GBGImageView alloc] initWithImage:confederateInfantrySprite];
     GBGImageView *confederateInfantrySpriteView1 = [[GBGImageView alloc] initWithImage:confederateInfantrySprite];
 
@@ -130,16 +130,9 @@
     CGPoint computerRegPoint1 = [[computerRegsLocations objectAtIndex:1] CGPointValue];
     confederateInfantrySpriteView1.center = CGPointMake(computerRegPoint1.x, computerRegPoint1.y);
     [self.view addSubview:confederateInfantrySpriteView1];
-    
-    
-    /*_map.userInteractionEnabled = TRUE;
-    unionInfantrySpriteView0.userInteractionEnabled = TRUE;
-    unionInfantrySpriteView1.userInteractionEnabled = TRUE;
-    confederateInfantrySpriteView0.userInteractionEnabled = TRUE;
-    confederateInfantrySpriteView1.userInteractionEnabled = TRUE;
-    */
-
+   
 }
+
 
 - (void)didReceiveMemoryWarning
 {

@@ -17,17 +17,11 @@ bool dragging;
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    //self.userInteractionEnabled = TRUE;
-    
     UITouch *touch = [touches anyObject];
-    CGPoint touchLocation = [touch locationInView: touch.view];
-    NSLog(@"%@", @"TOUCHED!");
-    if ([[touch.view class] isSubclassOfClass:[UIImageView class]]) {
-        
-        dragging = YES;
-        oldX = touchLocation.x;
-        oldY = touchLocation.y;
-    }
+    if ([touch.view isKindOfClass:[GBGImageView class]])
+        {
+            return;
+        }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -37,58 +31,23 @@ bool dragging;
 
 - (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    UITouch *touch = [[event allTouches] anyObject];
-    CGPoint touchLocation = [touch locationInView:touch.view];
-    if ([[touch.view class] isSubclassOfClass:[UIImageView class]]) {
-        UIView *theView = (UIView *)touch.view;
-        if (dragging) {
-            CGRect frame = theView.frame;
-            frame.origin.x = theView.frame.origin.x + touchLocation.x - oldX;
-            frame.origin.y = theView.frame.origin.y + touchLocation.y - oldY;
-            theView.frame = frame;
-        }
+    UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInView:self];
+    CGPoint previous = [touch previousLocationInView:self];
+    
+    if (!CGAffineTransformIsIdentity(self.transform)) {
+        location = CGPointApplyAffineTransform(location, self.transform);
+        previous = CGPointApplyAffineTransform(previous, self.transform);
     }
+    
+    self.frame = CGRectOffset(self.frame,
+                              (location.x - previous.x),
+                              (location.y - previous.y));
 }
 
 - (id) initWithImage:(UIImage *)image {
    self = [super initWithImage:image];
     return self;
 }
-/*- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
- {
- CGFloat radius = 100.0;
- CGRect frame = CGRectMake(0, 0,
- self.frame.size.width + radius,
- self.frame.size.height + radius);
- 
- if (CGRectContainsPoint(frame, point)) {
- return YES;
- }
- 
- return [super pointInside:point withEvent:event];
- }
- 
- - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
- {
- CGFloat radius = 100.0;
- CGRect frame = CGRectMake(0, 0,
- self.frame.size.width + radius,
- self.frame.size.height + radius);
- 
- if (CGRectContainsPoint(frame, point)) {
- return self;
- }
- return [super hitTest:point withEvent:event];
- 
- }
- */
-/*
- -(id)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
- id hitView = [super hitTest:point withEvent:event];
- if (hitView == self) return nil;
- else return hitView;
- }
- */
-
 
 @end
