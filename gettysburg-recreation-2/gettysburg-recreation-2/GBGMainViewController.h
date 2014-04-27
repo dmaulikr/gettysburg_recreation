@@ -24,6 +24,4 @@
 @property (nonatomic, strong) GBGPlayer *player;
 @property (nonatomic, strong) GBGPlayer *computer;
 
-@property (nonatomic, strong) NSMutableArray *imageViewArray;
-
 @end

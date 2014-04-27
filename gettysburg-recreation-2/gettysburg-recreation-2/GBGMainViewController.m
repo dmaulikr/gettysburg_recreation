@@ -48,7 +48,7 @@
     // Tell scrollView how big the map is, so it can scroll.
     //_scrollView.contentSize = bigRect.size;
 
-    // FIXME(DEBUG): are we passing values from the start menu?
+    // To be used in the future once the values are passed from the start menu
     NSLog(@"side: %i", _side);
     NSLog(@"rank: %i", _rank);
     
@@ -60,15 +60,17 @@
     CGPoint humanLocationsArray[2] = {{225, 300}, {225, 500}};
     CGPoint computerLocationsArray[2] = {{600, 275}, {600, 475}};
     
+    // Store the computer and human regiment locations in an array for easy access.
+    // For now, these locations are hard-coded.
     NSMutableArray *humanRegsLocations = [[NSMutableArray alloc] initWithObjects:
-                                          [NSValue valueWithCGPoint:CGPointMake(humanLocationsArray[0].x,humanLocationsArray[0].y)],
-                                          [NSValue valueWithCGPoint:CGPointMake(humanLocationsArray[1].x, humanLocationsArray[1].y)], nil];
+                                          [NSValue valueWithCGPoint:CGPointMake(225,300)],
+                                          [NSValue valueWithCGPoint:CGPointMake(225, 500)], nil];
     NSMutableArray *computerRegsLocations = [[NSMutableArray alloc] initWithObjects:
-                                             [NSValue valueWithCGPoint:CGPointMake(computerLocationsArray[0].x, computerLocationsArray[0].y)],
-                                             [NSValue valueWithCGPoint:CGPointMake(computerLocationsArray[1].x, computerLocationsArray[1].y)], nil];
+                                             [NSValue valueWithCGPoint:CGPointMake(600, 275)],
+                                             [NSValue valueWithCGPoint:CGPointMake(600, 475)], nil];
     
     _player = [[GBGPlayer alloc] initWithRegimentsAtLocations:humanRegsLocations andSide:_side];
-    assert(_player);
+    
     // FIXME: Eventually, there's going to have to be either two computer controllers (since currently
     // the GBGPlayer's side must match all of its regiments' sides), or the array is going to have to
     // pass in more information so that we can have GBGPlayers with regiments from both sides.
@@ -88,7 +90,7 @@
     // Get the sprite from the file
     UIImage *unionInfantrySprite = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Union_Soldier_Marching_Sprites" ofType:@"png"]];
     
-    // Create a GBGImageView for each sprite FIXME: wording
+    // Create a GBGImageView for each sprite
     GBGImageView *unionInfantrySpriteView0 = [[GBGImageView alloc] initWithImage:unionInfantrySprite];
     GBGImageView *unionInfantrySpriteView1 = [[GBGImageView alloc] initWithImage:unionInfantrySprite];
     
@@ -100,6 +102,8 @@
     CGPoint humanRegPoint0 = [[humanRegsLocations objectAtIndex:0] CGPointValue];
     unionInfantrySpriteView0.center = CGPointMake(humanRegPoint0.x, humanRegPoint0.y);
     [self.view addSubview:unionInfantrySpriteView0];
+    
+    // Make the view touchable and moveable
     unionInfantrySpriteView0.userInteractionEnabled = YES;
     
     // Obtain the second Union regiment's location and add a sprite there
@@ -107,6 +111,8 @@
     unionInfantrySpriteView1.center = CGPointMake(humanRegPoint1.x, humanRegPoint1.y);
     [self.view addSubview:unionInfantrySpriteView1];
     
+    // Make the view touchable and moveable
+    unionInfantrySpriteView1.userInteractionEnabled = YES;
     
     // Put the Confederate Infantry soldiers on the map
     
@@ -126,30 +132,22 @@
     confederateInfantrySpriteView0.center = CGPointMake(computerRegPoint0.x, computerRegPoint0.y);
     [self.view addSubview:confederateInfantrySpriteView0];
     
+    // Make the view touchable and moveable
+    confederateInfantrySpriteView0.userInteractionEnabled = YES;
+    
     // Obtain the second Confederate regiment's location and add a sprite there
     CGPoint computerRegPoint1 = [[computerRegsLocations objectAtIndex:1] CGPointValue];
     confederateInfantrySpriteView1.center = CGPointMake(computerRegPoint1.x, computerRegPoint1.y);
     [self.view addSubview:confederateInfantrySpriteView1];
-   
+    
+    // Make the view touchable and moveable
+    confederateInfantrySpriteView1.userInteractionEnabled = YES;
 }
-
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
- /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
