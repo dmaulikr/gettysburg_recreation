@@ -20,7 +20,10 @@
 // touches of GBGImageViews
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    // Get all touches from the user
     UITouch *touch = [touches anyObject];
+    
+    // Only react if the user touched a GBGImageView class instance
     if ([touch.view isKindOfClass:[GBGImageView class]])
         {
             return;
@@ -30,18 +33,25 @@
 // Override the touchesMoved: withEvent: method for smooth movement
 - (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    // Get the touch from the user and save its location
     UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInView:self];
-    CGPoint previous = [touch previousLocationInView:self];
+    CGPoint currentLocation = [touch locationInView:self];
+    CGPoint previousLocation = [touch previousLocationInView:self];
     
+    // If there is a transformation that needs to occur
+    // (i.e. it is not the identity transformation)
     if (!CGAffineTransformIsIdentity(self.transform)) {
-        location = CGPointApplyAffineTransform(location, self.transform);
-        previous = CGPointApplyAffineTransform(previous, self.transform);
+        
+        // Return the new current and previous locations resulting from
+        // the transformation from their previous respective values
+        currentLocation = CGPointApplyAffineTransform(currentLocation, self.transform);
+        previousLocation = CGPointApplyAffineTransform(currentLocation, self.transform);
     }
     
+    // Offset the view's origin to make movement look smoother
     self.frame = CGRectOffset(self.frame,
-                              (location.x - previous.x),
-                              (location.y - previous.y));
+                              (currentLocation.x - previousLocation.x),
+                              (currentLocation.y - previousLocation.y));
 }
 
 @end

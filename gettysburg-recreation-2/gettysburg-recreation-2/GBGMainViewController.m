@@ -49,37 +49,36 @@
     //_scrollView.contentSize = bigRect.size;
 
     // To be used in the future once the values are passed from the start menu
-    NSLog(@"side: %i", _side);
-    NSLog(@"rank: %i", _rank);
-    
-    
-    // Creating the regiments and handing them to the player and to the computer.
-    
-    // Initialize the computer and human regiment locations. For now, these locations
-    // are hard-coded.
-    CGPoint humanLocationsArray[2] = {{225, 300}, {225, 500}};
-    CGPoint computerLocationsArray[2] = {{600, 275}, {600, 475}};
+    // NSLog(@"side: %i", _side);
+    // NSLog(@"rank: %i", _rank);
     
     // Store the computer and human regiment locations in an array for easy access.
     // For now, these locations are hard-coded.
-    NSMutableArray *humanRegsLocations = [[NSMutableArray alloc] initWithObjects:
+     _humanRegsLocations = [[NSMutableArray alloc] initWithObjects:
                                           [NSValue valueWithCGPoint:CGPointMake(225,300)],
                                           [NSValue valueWithCGPoint:CGPointMake(225, 500)], nil];
-    NSMutableArray *computerRegsLocations = [[NSMutableArray alloc] initWithObjects:
+     _computerRegsLocations = [[NSMutableArray alloc] initWithObjects:
                                              [NSValue valueWithCGPoint:CGPointMake(600, 275)],
                                              [NSValue valueWithCGPoint:CGPointMake(600, 475)], nil];
     
-    _player = [[GBGPlayer alloc] initWithRegimentsAtLocations:humanRegsLocations andSide:_side];
+    _player = [[GBGPlayer alloc] initWithRegimentsAtLocations:_humanRegsLocations andSide:_side];
     
     // FIXME: Eventually, there's going to have to be either two computer controllers (since currently
     // the GBGPlayer's side must match all of its regiments' sides), or the array is going to have to
     // pass in more information so that we can have GBGPlayers with regiments from both sides.
     if (_side) {
-        _computer =[[GBGPlayer alloc] initWithRegimentsAtLocations:computerRegsLocations andSide:0];
+        _computer =[[GBGPlayer alloc] initWithRegimentsAtLocations:_computerRegsLocations andSide:0];
     }
     else {
-        _computer =[[GBGPlayer alloc] initWithRegimentsAtLocations:computerRegsLocations andSide:1];
+        _computer =[[GBGPlayer alloc] initWithRegimentsAtLocations:_computerRegsLocations andSide:1];
     }
+    
+    
+}
+
+// Place the sprites on the map
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
     // This is hard-coded because views overwrite each other in for-loops. For the first
     // iteration of this project, we want basic functionality for testing. We will optimize
@@ -99,7 +98,7 @@
     unionInfantrySpriteView1.transform = CGAffineTransformMakeRotation(3.14/2);
     
     // Obtain the first Union regiment's location and add a sprite there
-    CGPoint humanRegPoint0 = [[humanRegsLocations objectAtIndex:0] CGPointValue];
+    CGPoint humanRegPoint0 = [[_humanRegsLocations objectAtIndex:0] CGPointValue];
     unionInfantrySpriteView0.center = CGPointMake(humanRegPoint0.x, humanRegPoint0.y);
     [self.view addSubview:unionInfantrySpriteView0];
     
@@ -107,7 +106,7 @@
     unionInfantrySpriteView0.userInteractionEnabled = YES;
     
     // Obtain the second Union regiment's location and add a sprite there
-    CGPoint humanRegPoint1 = [[humanRegsLocations objectAtIndex:1] CGPointValue];
+    CGPoint humanRegPoint1 = [[_humanRegsLocations objectAtIndex:1] CGPointValue];
     unionInfantrySpriteView1.center = CGPointMake(humanRegPoint1.x, humanRegPoint1.y);
     [self.view addSubview:unionInfantrySpriteView1];
     
@@ -122,13 +121,13 @@
     // Create a GBGImageView for each sprite
     GBGImageView *confederateInfantrySpriteView0 = [[GBGImageView alloc] initWithImage:confederateInfantrySprite];
     GBGImageView *confederateInfantrySpriteView1 = [[GBGImageView alloc] initWithImage:confederateInfantrySprite];
-
-    // Rotate each the sprite views 90 degrees
-    confederateInfantrySpriteView0.transform = CGAffineTransformMakeRotation(-3.14/2);
+    
+    // Rotate each the sprite views 270 degrees
+    confederateInfantrySpriteView0.transform = CGAffineTransformMakeRotation((3.14*1.5));
     confederateInfantrySpriteView1.transform = CGAffineTransformMakeRotation(-3.14/2);
     
     // Obtain the first Confederate regiment's location and add a sprite there
-    CGPoint computerRegPoint0 = [[computerRegsLocations objectAtIndex:0] CGPointValue];
+    CGPoint computerRegPoint0 = [[_computerRegsLocations objectAtIndex:0] CGPointValue];
     confederateInfantrySpriteView0.center = CGPointMake(computerRegPoint0.x, computerRegPoint0.y);
     [self.view addSubview:confederateInfantrySpriteView0];
     
@@ -136,14 +135,13 @@
     confederateInfantrySpriteView0.userInteractionEnabled = YES;
     
     // Obtain the second Confederate regiment's location and add a sprite there
-    CGPoint computerRegPoint1 = [[computerRegsLocations objectAtIndex:1] CGPointValue];
+    CGPoint computerRegPoint1 = [[_computerRegsLocations objectAtIndex:1] CGPointValue];
     confederateInfantrySpriteView1.center = CGPointMake(computerRegPoint1.x, computerRegPoint1.y);
     [self.view addSubview:confederateInfantrySpriteView1];
     
     // Make the view touchable and moveable
     confederateInfantrySpriteView1.userInteractionEnabled = YES;
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
