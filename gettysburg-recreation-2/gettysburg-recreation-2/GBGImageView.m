@@ -45,7 +45,7 @@
         // Return the new current and previous locations resulting from
         // the transformation from their previous respective values
         currentLocation = CGPointApplyAffineTransform(currentLocation, self.transform);
-        previousLocation = CGPointApplyAffineTransform(currentLocation, self.transform);
+        previousLocation = CGPointApplyAffineTransform(previousLocation, self.transform);
     }
     
     // Offset the view's origin to make movement look smoother

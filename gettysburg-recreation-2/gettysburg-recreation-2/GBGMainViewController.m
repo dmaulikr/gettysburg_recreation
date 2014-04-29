@@ -74,12 +74,6 @@
     }
     
     
-}
-
-// Place the sprites on the map
-- (void) viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
     // This is hard-coded because views overwrite each other in for-loops. For the first
     // iteration of this project, we want basic functionality for testing. We will optimize
     // if there is time.
@@ -124,7 +118,7 @@
     
     // Rotate each the sprite views 270 degrees
     confederateInfantrySpriteView0.transform = CGAffineTransformMakeRotation((3.14*1.5));
-    confederateInfantrySpriteView1.transform = CGAffineTransformMakeRotation(-3.14/2);
+    confederateInfantrySpriteView1.transform = CGAffineTransformMakeRotation(3.14*1.5);
     
     // Obtain the first Confederate regiment's location and add a sprite there
     CGPoint computerRegPoint0 = [[_computerRegsLocations objectAtIndex:0] CGPointValue];
@@ -141,7 +135,16 @@
     
     // Make the view touchable and moveable
     confederateInfantrySpriteView1.userInteractionEnabled = YES;
+    
 }
+
+// Place the sprites on the map
+/*
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+ 
+}
+*/
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
